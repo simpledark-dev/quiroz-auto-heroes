@@ -107,7 +107,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-16 md:py-24 bg-[var(--qah-section-light)] opacity-0"
+      className="py-16 md:py-24 bg-[var(--qah-section-light)] opacity-0 scroll-mt-28 md:scroll-mt-32"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         {/* Section Header */}
@@ -124,7 +124,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left - Contact Cards */}
           <div className="space-y-5">
             {contactInfo.map((info, index) => (
