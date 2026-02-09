@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --qah-primary: #002865;
+  --qah-accent: #0460DD;
+  --qah-accent-hover: #0350BB;
+
+  /* Dark-themed section backgrounds */
+  --qah-light: #0a1628;
+  --qah-card: #0f2040;
+
+  /* Text on dark backgrounds */
+  --qah-white: #ffffff;
+  --qah-dark: #c0c8d4;
+
+  /* Light section backgrounds */
+  --qah-section-light: #f8fafb;
+
+  /* Text on light backgrounds */
+  --qah-text-heading: #0f172a;
+  --qah-text-body: #475569;
+}
+
+/* Scroll animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 400ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
