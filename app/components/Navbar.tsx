@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/quiroz-auto-heroes-logo-1.png';
+import logo from '../assets/quiroz-auto-heroes-logo-1.jpg';
 
 const navLinks = [
   { href: '/', label: 'Home' },
