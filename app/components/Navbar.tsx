@@ -218,43 +218,44 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA Button */}
-          <a
-            href="tel:6302760478"
-            className="hidden md:inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 h-11 rounded-full hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 group"
-          >
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Right side: CTA + Mobile Menu */}
+          <div className="flex items-center gap-3">
+            <a
+              href="tel:6302760478"
+              className="hidden md:inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 h-11 rounded-full hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 group"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
-            <span className="font-medium">Call Us Now</span>
-          </a>
+              <svg
+                className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <span className="font-medium">Call Us Now</span>
+            </a>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--qah-card)]/50 text-[var(--qah-white)] hover:bg-[var(--qah-accent)] transition-colors duration-200"
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--qah-card)]/50 text-[var(--qah-white)] hover:bg-[var(--qah-accent)] transition-colors duration-200"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -285,10 +286,14 @@ export default function Navbar() {
                   </button>
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
-                      isMobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      isMobileServicesOpen ? 'max-h-[70vh] opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <div className="pl-4 py-1 space-y-1">
+                    <div
+                      className={`pl-4 py-1 space-y-1 ${
+                        isMobileServicesOpen ? 'overflow-y-auto pr-2 max-h-[70vh]' : ''
+                      }`}
+                    >
                       {services.map((service) => (
                         <Link
                           key={service.slug}

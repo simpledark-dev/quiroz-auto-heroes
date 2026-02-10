@@ -35,7 +35,7 @@ export default function About() {
       className="py-16 md:py-24 bg-[var(--qah-section-light)] opacity-0"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Image Collage */}
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-square rounded-xl shadow-md overflow-hidden">
@@ -66,7 +66,7 @@ export default function About() {
 
           {/* Right - Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-4 text-center lg:text-left">
               <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
                 About Us
               </span>
@@ -83,7 +83,7 @@ export default function About() {
             </div>
 
             {/* Features List */}
-            <ul className="space-y-4">
+            <ul className="space-y-4 max-w-md mx-auto lg:mx-0 lg:max-w-none">
               {[
                 'Experienced, factory-trained technicians',
                 'State-of-the-art diagnostic equipment',
@@ -111,9 +111,9 @@ export default function About() {
             </ul>
 
             {/* CTA Button */}
-            <div>
+            <div className="text-center lg:text-left">
               <a
-                href="#contact"
+                href="/about"
                 className="inline-flex items-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
                 More About Us

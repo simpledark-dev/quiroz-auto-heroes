@@ -30,14 +30,14 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="pt-32 pb-24 md:pt-40 md:pb-24 lg:pb-24 bg-[var(--qah-light)] opacity-0"
+      className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] opacity-0"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 text-center md:text-left">
+          <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
-              <h1 className="text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+              <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
                 Villa Park&apos;s Trusted Auto Repair & Car Repair Experts
               </h1>
               <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/services"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
@@ -89,7 +89,7 @@ export default function Hero() {
             </div>
 
             {/* Trust Row */}
-            <div className="flex flex-wrap gap-6 pt-4 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-6 pt-4 justify-center lg:justify-start">
               <div className="flex items-center gap-2">
                 <svg
                   className="w-5 h-5 text-[var(--qah-accent)]"

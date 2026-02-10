@@ -7,10 +7,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f2847] text-white">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo and Description */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
+          <div className="space-y-4 text-center md:text-left md:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
               <Image
                 src={logo}
                 alt="Quiroz Auto Heroes"
@@ -123,7 +123,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 text-center md:text-left">
             <p>
               &copy; {currentYear} Quiroz Auto Heroes. All rights reserved.
             </p>
