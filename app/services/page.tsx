@@ -9,7 +9,7 @@ const heroCopy = {
   eyebrow: 'Our Services',
   title: 'Complete Auto Repair & Car Repair Services in Villa Park, IL',
   description:
-    'From routine maintenance to complex repairs, our ASE-certified mechanics provide transparent diagnostics, fast turnaround, and warranty-backed workmanship for Villa Park and DuPage County drivers.',
+    'From routine car maintenance to complex auto repairs, our experienced mechanics provide transparent diagnostics, fast turnaround, and warranty-backed workmanship for Villa Park and DuPage County drivers.',
 };
 
 const featuredServices: FeaturedService[] = [

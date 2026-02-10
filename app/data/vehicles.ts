@@ -154,7 +154,7 @@ export const vehicles: VehicleData[] = [
     name: 'Isuzu',
     description: [
       "Quiroz Auto Heroes in Villa Park, IL has the expertise to service and repair Isuzu vehicles. Known for their durable trucks and SUVs, Isuzu vehicles require knowledgeable technicians who understand their robust engineering.",
-      "Our certified team handles everything from routine maintenance to complex repairs on all Isuzu models. We use quality parts and the latest diagnostic equipment to ensure your vehicle receives the best possible care.",
+      "Our experienced team handles everything from routine maintenance to complex repairs on all Isuzu models. We use quality parts and the latest diagnostic equipment to ensure your vehicle receives the best possible care.",
       "Give us a call or stop in to schedule an appointment for your Isuzu today!",
     ],
   },
@@ -325,7 +325,7 @@ export const vehicles: VehicleData[] = [
     name: 'Smart',
     description: [
       "Quiroz Auto Heroes in Villa Park, IL provides specialized service for Smart vehicles. Smart cars feature unique compact engineering that requires knowledgeable technicians for proper maintenance and repair.",
-      "Our certified team is experienced with Smart vehicles and delivers quality service to keep your car running efficiently and reliably.",
+      "Our experienced team is skilled with Smart vehicles and delivers quality service to keep your car running efficiently and reliably.",
       "Give us a call or stop in to schedule your Smart car service appointment!",
     ],
   },

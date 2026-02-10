@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 export const metadata: Metadata = {
   title: 'Auto Repair Shop in Villa Park, IL | Quiroz Auto Heroes',
   description:
-    'Quiroz Auto Heroes delivers ASE-certified diagnostics, brake repair, maintenance, and fleet services for drivers throughout Villa Park and DuPage County.',
+    'Quiroz Auto Heroes delivers expert auto repair, car repair, brake service, maintenance, and fleet services for drivers throughout Villa Park and DuPage County.',
   alternates: {
     canonical: '/',
   },

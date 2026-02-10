@@ -187,9 +187,10 @@ export default async function ServiceDetailPage({
                     <div className="relative aspect-[4/3] rounded-2xl shadow-xl overflow-hidden ring-1 ring-black/5">
                       <Image
                         src={service.image}
-                        alt={service.title}
+                        alt={`${service.title} service in Villa Park, IL`}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-tr from-[var(--qah-primary)]/20 via-transparent to-transparent" />
                     </div>

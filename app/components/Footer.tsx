@@ -127,20 +127,9 @@ export default function Footer() {
             <p>
               &copy; {currentYear} Quiroz Auto Heroes. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-200"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-200"
-              >
-                Terms of Service
-              </a>
-            </div>
+            <p>
+              201 W North Ave, Unit 201, Villa Park, IL 60181 · (630) 276-0478
+            </p>
           </div>
         </div>
       </div>
