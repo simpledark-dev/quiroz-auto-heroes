@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import logo from '../assets/quiroz-auto-heroes-logo.jpg';
+import logo from '../assets/quiroz-auto-heroes-logo-1.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
