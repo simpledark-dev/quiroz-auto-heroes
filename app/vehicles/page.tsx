@@ -1,13 +1,21 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { absoluteUrl } from '@/lib/seo';
 import { vehicles } from '../data/vehicles';
 import Navbar from '../components/Navbar';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Vehicles We Service - Quiroz Auto Heroes | Villa Park, IL',
   description:
-    'Quiroz Auto Heroes in Villa Park, IL services all makes and models. From Acura to Volvo, our certified technicians provide expert maintenance and repair for your vehicle.',
+    'Quiroz Auto Heroes in Villa Park, IL services all makes and models. From Acura to Volvo, our experienced technicians provide expert maintenance and repair for your vehicle.',
+  alternates: {
+    canonical: '/vehicles',
+  },
+  openGraph: {
+    url: absoluteUrl('/vehicles'),
+  },
 };
 
 export default function VehiclesPage() {
@@ -37,7 +45,7 @@ export default function VehiclesPage() {
               Vehicles We Service
             </h1>
             <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
-              From domestic to import, economy to luxury — our certified technicians service all vehicle makes and models in Villa Park and DuPage County.
+              From domestic to import, economy to luxury — our experienced technicians service all vehicle makes and models in Villa Park and DuPage County.
             </p>
           </div>
         </div>
@@ -83,7 +91,7 @@ export default function VehiclesPage() {
                 Don&apos;t See Your Vehicle?
               </h2>
               <p className="text-white/85 leading-relaxed">
-                We service virtually all makes and models. If you don&apos;t see your vehicle listed, give us a call — our certified technicians can help with any vehicle.
+                We service virtually all makes and models. If you don&apos;t see your vehicle listed, give us a call — our experienced technicians can help with any vehicle.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <a

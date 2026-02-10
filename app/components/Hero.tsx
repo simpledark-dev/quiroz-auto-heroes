@@ -38,11 +38,11 @@ export default function Hero() {
           <div className="space-y-8 text-center md:text-left">
             <div className="space-y-4">
               <h1 className="text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
-                Villa Park&apos;s Trusted Auto Repair Experts
+                Villa Park&apos;s Trusted Auto Repair & Car Repair Experts
               </h1>
               <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
-                Serving Villa Park, IL and surrounding communities with premium automotive
-                services backed by ASE-certified technicians and a commitment to excellence.
+                Your trusted mechanic in Villa Park, IL. We provide premium auto repair services
+                and car repair for all makes and models, backed by experienced technicians and a commitment to excellence.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ export default function Hero() {
                   />
                 </svg>
                 <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  ASE-certified
+                  Expert service
                 </span>
               </div>
               <div className="flex items-center gap-2">

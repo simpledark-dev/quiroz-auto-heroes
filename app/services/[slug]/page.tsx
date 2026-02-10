@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { absoluteUrl } from '@/lib/seo';
 import { services, getServiceBySlug, getAllServiceSlugs } from '../../data/services';
 import Navbar from '../../components/Navbar';
 import Contact from '../../components/Contact';
@@ -10,17 +12,49 @@ export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  // We need to handle this synchronously for static generation
-  // Next.js will resolve the params during build
-  return params.then(({ slug }) => {
-    const service = getServiceBySlug(slug);
-    if (!service) return { title: 'Service Not Found' };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
+  if (!service) {
     return {
-      title: `${service.title} - Quiroz Auto Heroes | Villa Park, IL`,
-      description: service.description,
+      title: 'Service Not Found',
+      description: 'The service you are looking for could not be found.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
-  });
+  }
+
+  const canonicalUrl = absoluteUrl(`/services/${slug}`);
+  return {
+    title: `${service.title} - Quiroz Auto Heroes | Villa Park, IL`,
+    description: service.description,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
+    openGraph: {
+      url: canonicalUrl,
+      title: `${service.title} | Quiroz Auto Heroes`,
+      description: service.description,
+      images: [
+        {
+          url: service.image,
+          alt: service.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} | Quiroz Auto Heroes`,
+      description: service.description,
+      images: [service.image],
+    },
+  };
 }
 
 export default async function ServiceDetailPage({
@@ -34,9 +68,39 @@ export default async function ServiceDetailPage({
   if (!service) {
     notFound();
   }
+  const canonicalUrl = absoluteUrl(`/services/${slug}`);
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    serviceType: service.title,
+    description: service.description,
+    provider: {
+      '@type': 'AutoRepair',
+      name: 'Quiroz Auto Heroes',
+      url: absoluteUrl('/'),
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Villa Park',
+      address: 'Villa Park, IL',
+    },
+    url: canonicalUrl,
+  };
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: absoluteUrl('/services') },
+      { '@type': 'ListItem', position: 3, name: service.shortTitle, item: canonicalUrl },
+    ],
+  };
 
   return (
     <main className="min-h-screen overflow-x-hidden">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Navbar />
 
       {/* Hero Banner */}

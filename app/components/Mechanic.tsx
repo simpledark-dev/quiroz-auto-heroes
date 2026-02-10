@@ -52,7 +52,7 @@ export default function Mechanic() {
                 Hi, I&apos;m Alexia — the owner and sole mechanic at Quiroz Auto Heroes.
                 With over a decade of hands-on experience, I personally handle every
                 repair that comes through our Villa Park shop. I stay current with
-                the latest automotive technology and maintain ASE certifications to
+                the latest automotive technology through ongoing training and education to
                 ensure your vehicle receives the highest quality care. When you bring
                 your car here, you work directly with me — no middlemen, just honest,
                 expert service.

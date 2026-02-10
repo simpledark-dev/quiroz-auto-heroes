@@ -20,9 +20,9 @@ export default function Footer() {
               <span className="text-2xl font-bold">Quiroz Auto Heroes</span>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Your trusted partner for premium auto repair services in Villa Park, Illinois.
-              Our ASE-certified technicians are committed to excellence and customer satisfaction,
-              serving the Villa Park community and neighboring areas throughout DuPage County.
+              Your trusted auto repair and car repair mechanic in Villa Park, Illinois.
+              Our experienced mechanics are committed to excellence and customer satisfaction,
+              providing quality auto repair services to the Villa Park community and neighboring areas throughout DuPage County.
             </p>
           </div>
 

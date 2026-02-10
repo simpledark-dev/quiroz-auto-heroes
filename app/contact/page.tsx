@@ -1,12 +1,20 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { absoluteUrl } from '@/lib/seo';
 import Navbar from '../components/Navbar';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-export const metadata = {
-  title: 'Contact Us - Quiroz Auto Heroes | Villa Park, IL',
+export const metadata: Metadata = {
+  title: 'Contact Us - Auto Repair & Car Repair Mechanic | Villa Park, IL',
   description:
-    'Contact Quiroz Auto Heroes in Villa Park, IL. Call (630) 276-0478, email us, or visit our shop at 201 W North Ave. Serving Villa Park, Lombard, Elmhurst, and DuPage County.',
+    'Contact Quiroz Auto Heroes for auto repair and car repair services in Villa Park, IL. Call (630) 276-0478, email us, or visit our mechanic shop at 201 W North Ave. Serving Villa Park, Lombard, Elmhurst, and DuPage County.',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    url: absoluteUrl('/contact'),
+  },
 };
 
 export default function ContactPage() {
@@ -33,10 +41,10 @@ export default function ContactPage() {
               Get In Touch
             </span>
             <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
-              Contact Us
+              Contact Your Villa Park Auto Repair Mechanic
             </h1>
             <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
-              Ready to schedule your service? Reach out to us by phone, email, or visit our Villa Park location. We&apos;re here to help.
+              Ready to schedule your auto repair or car repair service? Reach out to our experienced mechanic by phone, email, or visit our Villa Park location. We&apos;re here to help with all your automotive needs.
             </p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { absoluteUrl } from '@/lib/seo';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,6 +9,18 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Auto Repair Shop in Villa Park, IL | Quiroz Auto Heroes',
+  description:
+    'Quiroz Auto Heroes delivers ASE-certified diagnostics, brake repair, maintenance, and fleet services for drivers throughout Villa Park and DuPage County.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: absoluteUrl('/'),
+  },
+};
 
 export default function QuirozAutoHeroes() {
   return (

@@ -108,7 +108,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Engine Services',
     tagline: 'Engine trouble?',
     description:
-      'Your engine is the heart of your vehicle, and we treat it with the care it deserves. At our Villa Park shop, our ASE-certified technicians use state-of-the-art diagnostic equipment to accurately identify issues, from minor tune-ups to major overhauls.',
+      'Your engine is the heart of your vehicle, and we treat it with the care it deserves. At our Villa Park shop, our experienced technicians use state-of-the-art diagnostic equipment to accurately identify issues, from minor tune-ups to major overhauls.',
     details: [
       'Complete engine diagnostics and troubleshooting',
       'Check engine light diagnosis',
@@ -120,7 +120,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80',
     content: {
       intro: [
-        "Your engine is the heart of your vehicle, and at Quiroz Auto Heroes in Villa Park, we treat it with the utmost care and precision. Our ASE-certified technicians leverage state-of-the-art diagnostic equipment to accurately identify engine issues, ensuring every problem is addressed at its source.",
+        "Your engine is the heart of your vehicle, and at Quiroz Auto Heroes in Villa Park, we treat it with the utmost care and precision. Our experienced technicians leverage state-of-the-art diagnostic equipment to accurately identify engine issues, ensuring every problem is addressed at its source.",
         "From minor tune-ups to major overhauls, our team has the expertise and equipment to handle it all. We understand that engine problems can be stressful, which is why we focus on transparent communication and efficient service to get you back on the road quickly.",
       ],
       servicesTitle: 'Comprehensive Engine Services',
@@ -146,7 +146,7 @@ export const services: ServiceData[] = [
     },
   },
   {
-    slug: 'battery-replacement',
+    slug: 'battery-electrical',
     title: 'Battery & Electrical Systems',
     shortTitle: 'Battery & Electrical',
     tagline: "Car won't start?",
@@ -314,6 +314,92 @@ export const services: ServiceData[] = [
       whyChoose: [
         "Illinois businesses throughout Villa Park and DuPage County trust Quiroz Auto Heroes with their fleets because we deliver consistent, high-quality service with minimal disruption to operations. Our dedicated fleet team understands the unique demands of commercial vehicles.",
         "From small business fleets to larger operations, we scale our services to meet your needs. Contact us to discuss a custom fleet maintenance program for your business.",
+      ],
+    },
+  },
+  {
+    slug: 'battery-replacement',
+    title: 'Car Battery Replacement & Service',
+    shortTitle: 'Battery Replacement',
+    tagline: 'Battery dying?',
+    description:
+      "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Heroes, we specialize in ensuring that this critical component is in optimal condition for Villa Park drivers.",
+    details: [
+      'Battery health testing and diagnostics',
+      'Battery replacement for all makes and models',
+      'Terminal cleaning and corrosion removal',
+      'Charging system inspection',
+      'Jump-start and emergency assistance',
+      'Eco-friendly battery recycling',
+    ],
+    image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&q=80',
+    content: {
+      intro: [
+        "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Heroes in Villa Park, IL, we specialize in ensuring that this critical component is in optimal condition. We're committed to keeping your car's heart beating strong.",
+        "A car battery might look simple, but it's the lifeblood of your vehicle. A failing battery can lead to a myriad of issues, from sluggish starts to complete breakdowns. At our Villa Park shop, we utilize advanced diagnostic tools to gauge the health of your battery, ensuring it has the strength to support all of your vehicle's operations.",
+      ],
+      servicesTitle: 'Comprehensive Battery Services',
+      servicesList: [
+        { name: 'Battery Testing', description: 'We assess the overall health, charge level, and potential longevity of your battery.', image: '' },
+        { name: 'Battery Replacement', description: 'We stock a range of high-quality replacements suited to various vehicle makes and models.', image: '' },
+        { name: 'Battery Maintenance', description: 'Proper care can extend battery life. We provide terminal cleaning and electrolyte level checks.', image: '' },
+        { name: 'Charging System Check', description: 'Full inspection of alternator, voltage regulator, and charging circuits.', image: '' },
+        { name: 'Battery Recycling', description: 'Environmental responsibility is key. We ensure old batteries are disposed of in an eco-friendly manner.', image: '' },
+        { name: 'Battery Education', description: 'We empower our customers with knowledge about battery care for longer life and fewer issues.', image: '' },
+      ],
+      maintenance: {
+        title: 'Emergency Battery Assistance',
+        paragraphs: [
+          "At Quiroz Auto Heroes, we understand that battery issues can strike unexpectedly. That's why we're always on standby to assist, whether it's jump-starting your vehicle or providing a swift battery replacement. Our team is trained to handle emergencies efficiently, ensuring you're back on the road in no time.",
+          "We recommend regular battery testing, especially before extreme weather seasons in Illinois, to avoid unexpected breakdowns. Our quick diagnostic tests can tell you the health of your battery in minutes.",
+        ],
+      },
+      whyChoose: [
+        "Choosing Quiroz Auto Heroes for your battery service needs means opting for excellence. Whether you're in Villa Park or anywhere in DuPage County, you can trust our team's expertise, our state-of-the-art equipment, and our commitment to customer satisfaction.",
+        "We stock batteries for all major makes and models, ensuring same-day replacement in most cases. Every battery we install comes with a warranty for your peace of mind.",
+      ],
+    },
+  },
+  {
+    slug: 'car-repair-estimate',
+    title: 'Car Repair Estimates',
+    shortTitle: 'Repair Estimates',
+    tagline: 'Need a quote?',
+    description:
+      'Get transparent, accurate repair estimates before any work begins. At Quiroz Auto Heroes, we pride ourselves on honest pricing with no surprises — just straightforward assessments you can trust.',
+    details: [
+      'Free initial vehicle inspection',
+      'Detailed written repair estimates',
+      'Transparent pricing breakdown',
+      'No-obligation consultations',
+      'Digital inspection reports',
+      'Second opinion evaluations',
+    ],
+    image: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da20?w=800&q=80',
+    content: {
+      intro: [
+        "At Quiroz Auto Heroes in Villa Park, IL, we understand that when your vehicle faces a problem, you want a straightforward and accurate estimate for repairs. We pride ourselves on our transparent and trustworthy service, providing Villa Park and DuPage County drivers with honest assessments they can rely on.",
+        "We have developed a comprehensive approach to auto repair estimates, ensuring clarity and precision. Our trained technicians evaluate your vehicle thoroughly using advanced diagnostic tools. This means that not only do we identify the obvious issues, but we also uncover underlying problems that could lead to future complications.",
+      ],
+      servicesTitle: 'Why Our Estimates Stand Out',
+      servicesList: [
+        { name: 'Transparency', description: 'Every component of the estimate is explained, so you know exactly what you are paying for.', image: '' },
+        { name: 'Accuracy', description: 'We use the latest market data to ensure that our estimates are competitive and fair.', image: '' },
+        { name: 'Integrity', description: 'We recommend only the necessary repairs, ensuring you get the best value for your money.', image: '' },
+        { name: 'Timeliness', description: 'We know time is of the essence, so our team works diligently to provide estimates promptly.', image: '' },
+        { name: 'Communication', description: 'Our team is always available to answer any questions or concerns you may have.', image: '' },
+        { name: 'Digital Reports', description: 'Receive detailed digital inspection reports with photos so you can see exactly what we found.', image: '' },
+      ],
+      maintenance: {
+        title: 'Using Advanced Technology',
+        paragraphs: [
+          "In Villa Park, our technicians leverage the power of cutting-edge diagnostic equipment. These tools allow us to quickly and accurately determine the root cause of any vehicular issue. It's not just about detecting a problem — it's about understanding its severity, potential implications, and the best methods of repair.",
+          "We believe that using the best tools on the market is crucial for providing our customers with the most accurate estimates. This investment in technology translates directly to savings for you through precise diagnostics and targeted repairs.",
+        ],
+      },
+      whyChoose: [
+        "We recognize that every vehicle that comes into our shop represents a person or family who relies on their car for daily life. That's why we're committed to providing you with a stress-free experience. Whether you're in Villa Park or the surrounding DuPage County area, we promise to handle your vehicle with the utmost care.",
+        "Our no-obligation estimates mean you're never pressured into a repair. We lay out your options, explain the pros and cons, and let you make the decision that's right for your budget and your vehicle.",
       ],
     },
   },

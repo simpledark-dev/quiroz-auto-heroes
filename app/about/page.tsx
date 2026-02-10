@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
+import { absoluteUrl } from '@/lib/seo';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
@@ -31,7 +33,7 @@ const values = [
   {
     title: 'Craftsmanship First',
     description:
-      'Each repair is handled by ASE-certified hands with premium parts, torque specs, and test drives.',
+      'Each repair is handled by experienced hands with premium parts, torque specs, and test drives.',
   },
   {
     title: 'Community Focus',
@@ -72,10 +74,16 @@ const milestones = [
   },
 ];
 
-export const metadata = {
-  title: 'About Quiroz Auto Heroes | Villa Park Auto Repair Experts',
+export const metadata: Metadata = {
+  title: 'About Quiroz Auto Heroes | Villa Park Auto Repair & Car Repair Mechanic',
   description:
-    'Learn how Quiroz Auto Heroes became Villa Park’s trusted auto repair shop. Meet our mission, values, and story rooted in craftsmanship and transparency.',
+    "Learn how Quiroz Auto Heroes became Villa Park's trusted auto repair and car repair shop. Meet our experienced mechanic, mission, values, and story rooted in craftsmanship and transparency.",
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    url: absoluteUrl('/about'),
+  },
 };
 
 export default function AboutPage() {
@@ -95,12 +103,12 @@ export default function AboutPage() {
                 Rooted in Villa Park · Est. 2014
               </span>
               <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
-                A single-bay shop with enterprise-level standards.
+                Your Trusted Auto Repair & Car Repair Mechanic in Villa Park
               </h1>
               <p className="text-lg text-[var(--qah-dark)]/80 leading-relaxed">
-                Inspired by the legacy of Quiroz Auto Center, we built Quiroz Auto Heroes to deliver concierge-style car care.
+                Inspired by the legacy of Quiroz Auto Center, we built Quiroz Auto Heroes to deliver concierge-style auto repair and car care.
                 No shortcuts—just transparent diagnostics, dealership-grade tooling, and the personal accountability of a
-                neighborhood mechanic.
+                neighborhood mechanic who cares about your vehicle.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
@@ -126,7 +134,7 @@ export default function AboutPage() {
 
             <div className="relative p-3">
               <div className="absolute top-6 right-6 bg-white/10 border border-white/10 rounded-2xl px-4 py-3 text-sm text-white shadow-lg">
-                ASE Certified · Same-Day Diagnostics
+                Expert Service · Same-Day Diagnostics
               </div>
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                 <Image src={heroImage} alt="Quiroz Auto Heroes workshop" fill className="object-cover" priority />

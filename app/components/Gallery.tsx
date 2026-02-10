@@ -1,14 +1,39 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 const galleryItems = [
-  { label: 'Brake Service', color: 'from-[var(--qah-primary)] to-[var(--qah-accent)]' },
-  { label: 'Engine Diagnostics', color: 'from-[var(--qah-accent)] to-[var(--qah-primary)]' },
-  { label: 'Oil Change', color: 'from-[var(--qah-primary)]/90 to-[var(--qah-accent)]/90' },
-  { label: 'Tire Rotation', color: 'from-[var(--qah-accent)]/90 to-[var(--qah-primary)]/90' },
-  { label: 'A/C Repair', color: 'from-[var(--qah-primary)]/80 to-[var(--qah-accent)]/80' },
-  { label: 'Fleet Maintenance', color: 'from-[var(--qah-accent)]/80 to-[var(--qah-primary)]/80' },
+  {
+    label: 'Our Shop Exterior',
+    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop&q=80',
+    alt: 'Professional auto repair shop exterior in Villa Park',
+  },
+  {
+    label: 'Modern Service Bays',
+    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop&q=80',
+    alt: 'Clean and organized service bays with modern equipment',
+  },
+  {
+    label: 'Professional Diagnostics',
+    image: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&auto=format&fit=crop&q=80',
+    alt: 'Expert mechanic performing vehicle diagnostics',
+  },
+  {
+    label: 'Expert Technicians',
+    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&auto=format&fit=crop&q=80',
+    alt: 'Experienced auto technician working on vehicle',
+  },
+  {
+    label: 'Quality Workspace',
+    image: 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&auto=format&fit=crop&q=80',
+    alt: 'Well-equipped auto repair workspace',
+  },
+  {
+    label: 'Precision Service',
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&auto=format&fit=crop&q=80',
+    alt: 'Mechanic providing precision automotive service',
+  },
 ];
 
 export default function Gallery() {
@@ -46,11 +71,11 @@ export default function Gallery() {
             Gallery
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
-            Our Work Gallery
+            Our Shop & Facility
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
-            Take a look at the quality craftsmanship and attention to detail we
-            bring to every repair at our Villa Park auto shop.
+            Step inside Quiroz Auto Heroes. Our modern, well-equipped facility in Villa Park
+            is designed to provide professional, efficient service in a clean and welcoming environment.
           </p>
         </div>
 
@@ -63,16 +88,16 @@ export default function Gallery() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Image Placeholder */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${item.color} transition-transform duration-300 ${
+              {/* Image */}
+              <Image
+                src={item.image}
+                alt={item.alt}
+                fill
+                className={`object-cover transition-transform duration-300 ${
                   hoveredIndex === index ? 'scale-110' : 'scale-100'
                 }`}
-              >
-                <div className="w-full h-full flex items-center justify-center text-white/10 text-xs">
-                  Gallery Image {index + 1}
-                </div>
-              </div>
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
 
               {/* Overlay */}
               <div

@@ -76,8 +76,8 @@ const contactInfo = [
 ];
 
 const hours = [
-  { day: 'Monday - Friday', time: '8:00 AM - 6:00 PM' },
-  { day: 'Saturday', time: '9:00 AM - 4:00 PM' },
+  { day: 'Monday - Friday', time: '7:30 AM - 5:30 PM' },
+  { day: 'Saturday', time: '7:30 AM - 2:30 PM' },
   { day: 'Sunday', time: 'Closed' },
 ];
 
