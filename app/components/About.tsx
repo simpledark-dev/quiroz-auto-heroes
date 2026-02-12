@@ -74,18 +74,19 @@ export default function About() {
                 Villa Park&apos;s Neighborhood Auto Repair & Car Repair Shop
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
-                For over a decade, Quiroz Auto Heroes has been the go-to auto repair and car repair mechanic
-                for Villa Park residents and drivers throughout Illinois. We combine expert
-                craftsmanship with honest, transparent service right here on North Avenue.
-                Our experienced auto mechanics use the latest diagnostic equipment to keep
-                your vehicle running safely and efficiently.
+                Born from the Quiroz family&apos;s legacy in auto repair across the Chicago area,
+                Quiroz Auto Heroes brings over a decade of hands-on expertise to Villa Park.
+                We combine the same trusted craftsmanship our family is known for with
+                honest, transparent service right here on North Avenue. Our experienced
+                auto mechanics use the latest diagnostic equipment to keep your vehicle
+                running safely and efficiently.
               </p>
             </div>
 
             {/* Features List */}
             <ul className="space-y-4 max-w-md mx-auto lg:mx-0 lg:max-w-none">
               {[
-                'Experienced, factory-trained technicians',
+                'Backed by a family legacy in Chicago-area auto repair',
                 'State-of-the-art diagnostic equipment',
                 'Comprehensive warranty on all repairs',
                 'Transparent pricing with no hidden fees',

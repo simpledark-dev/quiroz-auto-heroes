@@ -50,12 +50,13 @@ export default function Mechanic() {
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
                 Hi, I&apos;m Alexia — the owner and sole mechanic at Quiroz Auto Heroes.
-                With over a decade of hands-on experience, I personally handle every
-                repair that comes through our Villa Park shop. I stay current with
-                the latest automotive technology through ongoing training and education to
-                ensure your vehicle receives the highest quality care. When you bring
-                your car here, you work directly with me — no middlemen, just honest,
-                expert service.
+                I grew up in my family&apos;s auto repair shops across the Chicago area,
+                learning the trade from the ground up. With over a decade of hands-on
+                experience, I brought that same Quiroz family standard of excellence
+                to Villa Park. I personally handle every repair that comes through
+                our shop and stay current with the latest automotive technology
+                through ongoing training. When you bring your car here, you work
+                directly with me — no middlemen, just honest, expert service.
               </p>
             </div>
 

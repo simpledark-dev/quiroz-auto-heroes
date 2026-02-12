@@ -307,7 +307,7 @@ export const vehicles: VehicleData[] = [
     name: 'Saturn',
     description: [
       "Quiroz Auto Heroes in Villa Park, IL continues to service Saturn vehicles with the same quality and care as any current model. Our technicians have experience with all Saturn models and can handle routine maintenance and complex repairs alike.",
-      "We use quality parts and modern diagnostic equipment to keep your Saturn running reliably. Our goal is to help you get the most life out of your vehicle.",
+      "We use quality parts and best equipment to keep your Saturn running reliably. Our goal is to help you get the most life out of your vehicle.",
       "Give us a call to schedule your Saturn service appointment!",
     ],
   },

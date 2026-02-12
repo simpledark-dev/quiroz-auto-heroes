@@ -12,7 +12,7 @@ import detailImage from '../assets/p5.jpg';
 const stats = [
   {
     label: '10+ Years',
-    sublabel: 'Hands-on experience keeping Villa Park drivers on the road.',
+    sublabel: 'Hands-on experience built in the Quiroz family shops and Villa Park.',
   },
   {
     label: '1,200+',
@@ -49,28 +49,28 @@ const values = [
 
 const milestones = [
   {
-    year: '2014',
-    title: 'Quiroz Auto Heroes opens its bay',
+    year: 'The Roots',
+    title: 'The Quiroz family builds a reputation',
     description:
-      'Alexia Quiroz launched a one-bay shop with a promise to fix cars the right way and treat every driver like family.',
+      'The Quiroz family establishes multiple auto repair shops across the Chicago area, including Quiroz Auto Center in Cicero, IL. Alexia grows up learning the trade hands-on alongside her brother and family.',
   },
   {
-    year: '2018',
+    year: 'The Leap',
+    title: 'Alexia brings the legacy to Villa Park',
+    description:
+      'With over a decade of experience earned in the family business, Alexia opens Quiroz Auto Heroes on North Avenue—carrying forward the Quiroz standard of honest, quality auto repair to a new community.',
+  },
+  {
+    year: 'Growth',
     title: 'Expanded diagnostics + fleet support',
     description:
-      'Invested in factory scan tools and began looking after delivery vans, rideshare vehicles, and local service fleets.',
-  },
-  {
-    year: '2021',
-    title: 'Performance + EV readiness',
-    description:
-      'Added battery maintenance programs, ADAS calibration partners, and performance brake/lubrication services.',
+      'Invested in factory scan tools and began looking after delivery vans, rideshare vehicles, and local service fleets. The Quiroz reputation continues to grow in Villa Park and DuPage County.',
   },
   {
     year: 'Today',
-    title: 'Villa Park’s trusted repair studio',
+    title: 'Villa Park\'s trusted neighborhood shop',
     description:
-      'Still independently owned, now with a waitlist built purely on referrals and repeat customers.',
+      'Still independently owned and operated by Alexia, now with a loyal customer base built purely on referrals, repeat clients, and the same family values that started it all.',
   },
 ];
 
@@ -100,13 +100,13 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-center lg:text-left">
               <span className="inline-flex items-center justify-center gap-2 px-4 py-1.5 bg-[var(--qah-accent)] text-white rounded-full text-sm font-semibold">
-                Rooted in Villa Park · Est. 2014
+                A Quiroz Family Legacy · Villa Park, IL
               </span>
               <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
                 Your Trusted Auto Repair & Car Repair Mechanic in Villa Park
               </h1>
               <p className="text-lg text-[var(--qah-dark)]/80 leading-relaxed">
-                Inspired by the legacy of Quiroz Auto Center, we built Quiroz Auto Heroes to deliver concierge-style auto repair and car care.
+              Inspired by the legacy of Quiroz Auto Center, we built Quiroz Auto Heroes to deliver concierge-style auto repair and car care.
                 No shortcuts—just transparent diagnostics, dealership-grade tooling, and the personal accountability of a
                 neighborhood mechanic who cares about your vehicle.
               </p>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
-                Built on honesty, elevated by modern tooling.
+                A family tradition, a new chapter.
               </h2>
               <p className="text-[var(--qah-text-body)] text-lg leading-relaxed">
                 Alexia Quiroz grew up in her family’s Chicago-area shop, learning that the best marketing is trust. When the
@@ -168,8 +168,8 @@ export default function AboutPage() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-[var(--qah-text-heading)]">Purpose-built for Villa Park</p>
-                    <p className="text-[var(--qah-text-body)]">Convenient North Avenue location with early drop-off, digital inspections, and text approvals.</p>
+                    <p className="font-semibold text-[var(--qah-text-heading)]">Family expertise, local roots</p>
+                    <p className="text-[var(--qah-text-body)]">Decades of Quiroz family know-how, now on North Avenue with early drop-off, digital inspections, and text approvals.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -242,8 +242,8 @@ export default function AboutPage() {
             </span>
             <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">What guides Quiroz Auto Heroes</h2>
             <p className="text-[var(--qah-text-body)] text-lg max-w-2xl mx-auto">
-              Inspired by Quiroz Auto Center’s service DNA, we have distilled four principles that show up in every
-              conversation, repair order, and post-service follow-up.
+            Inspired by Quiroz Auto Center’s service DNA, we have distilled four principles that show up in every
+            conversation, repair order, and post-service follow-up.
             </p>
           </div>
 
@@ -265,10 +265,10 @@ export default function AboutPage() {
             <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
               Milestones
             </span>
-            <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">From one bay to a trusted brand</h2>
+            <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">From family roots to a trusted brand</h2>
             <p className="text-[var(--qah-text-body)] text-lg max-w-3xl mx-auto">
-              Every chapter sharpened our focus: invest in education, modernize tooling, and protect the trust of Villa Park
-              families who depend on us for safe transportation.
+              The Quiroz legacy didn&apos;t start in Villa Park—it started in the family shops across Chicago. Every chapter
+              has sharpened our focus: invest in education, modernize tooling, and protect the trust that families depend on.
             </p>
           </div>
 

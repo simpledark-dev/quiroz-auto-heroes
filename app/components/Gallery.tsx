@@ -12,7 +12,7 @@ const galleryItems = [
   {
     label: 'Modern Service Bays',
     image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop&q=80',
-    alt: 'Clean and organized service bays with modern equipment',
+    alt: 'Clean and organized service bays with best equipment',
   },
   {
     label: 'Professional Diagnostics',
@@ -74,7 +74,7 @@ export default function Gallery() {
             Our Shop & Facility
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
-            Step inside Quiroz Auto Heroes. Our modern, well-equipped facility in Villa Park
+            Step inside Quiroz Auto Heroes. Our high-quality, well-equipped facility in Villa Park
             is designed to provide professional, efficient service in a clean and welcoming environment.
           </p>
         </div>
