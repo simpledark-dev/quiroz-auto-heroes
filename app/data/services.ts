@@ -375,7 +375,7 @@ export const services: ServiceData[] = [
       'Digital inspection reports',
       'Second opinion evaluations',
     ],
-    image: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da20?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80',
     content: {
       intro: [
         "At Quiroz Auto Heroes in Villa Park, IL, we understand that when your vehicle faces a problem, you want a straightforward and accurate estimate for repairs. We pride ourselves on our transparent and trustworthy service, providing Villa Park and DuPage County drivers with honest assessments they can rely on.",
