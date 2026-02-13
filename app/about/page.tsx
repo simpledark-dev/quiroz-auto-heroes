@@ -113,7 +113,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="/services"
-                  className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors"
                 >
                   Explore Services
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 </a>
                 <a
                   href="#story"
-                  className="inline-flex items-center gap-2 border border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center gap-2 border border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-colors"
                 >
                   Our Story
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

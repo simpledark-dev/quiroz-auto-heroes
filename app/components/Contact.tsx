@@ -144,11 +144,11 @@ export default function Contact() {
                     <div className="text-xs font-semibold text-[var(--qah-accent)] uppercase tracking-wider mb-1">
                       {info.label}
                     </div>
-                    <div className="text-lg font-semibold text-[var(--qah-text-heading)] mb-1">
+                    <div className="text-base sm:text-lg font-semibold text-[var(--qah-text-heading)] mb-1 break-words">
                       {info.value}
                     </div>
                     {info.value2 && (
-                      <div className="text-[var(--qah-text-body)]">
+                      <div className="text-[var(--qah-text-body)] break-words">
                         {info.value2}
                       </div>
                     )}

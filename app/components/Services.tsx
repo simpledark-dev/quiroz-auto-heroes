@@ -150,7 +150,7 @@ export default function Services() {
             href="/services"
             className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 py-4 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium text-lg"
           >
-            View All Services
+            View Our Services
             <svg
               className="w-5 h-5"
               fill="none"

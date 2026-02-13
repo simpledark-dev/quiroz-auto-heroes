@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Sarah Johnson',
     role: 'Villa Park Resident',
     quote:
-      'Exceptional service! The team diagnosed my brake issue quickly and had me back on the road the same day. Highly recommend.',
+      'Exceptional service in Villa Park IL! The team diagnosed my brake issue quickly and had me back on the road the same day. Highly recommend.',
     rating: 5,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     name: 'Emily Chen',
     role: 'Business Owner, Villa Park',
     quote:
-      'Best auto repair experience I have had. They took great care of my car and the customer service was outstanding.',
+      'Best auto repair experience I have had in Villa Park IL. They took great care of my car and the customer service was outstanding.',
     rating: 5,
   },
   {
@@ -36,6 +36,20 @@ const testimonials = [
     role: 'Addison Resident',
     quote:
       'I appreciate their transparency and expertise. They never try to upsell unnecessary services. True professionals.',
+    rating: 5,
+  },
+  {
+    name: 'Robert Kim',
+    role: 'Villa Park Resident',
+    quote:
+      'Finally found a trustworthy mechanic in Villa Park IL! Alexia is honest, knowledgeable, and takes the time to explain everything. Will never go anywhere else.',
+    rating: 5,
+  },
+  {
+    name: 'Jennifer Walsh',
+    role: 'Oak Park Resident',
+    quote:
+      'Brought my car here after a bad experience at another shop. Quiroz Auto Heroes fixed the problem right the first time. Professional, affordable, and friendly service.',
     rating: 5,
   },
 ];

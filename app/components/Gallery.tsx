@@ -2,36 +2,42 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import g1Image from '../assets/g1.jpg';
+import g2Image from '../assets/g2.png';
+import g3Image from '../assets/g3.jpg';
+import g4Image from '../assets/g4.jpg';
+import g5Image from '../assets/g5.jpg';
+import g6Image from '../assets/g6.jpg';
 
 const galleryItems = [
   {
     label: 'Our Shop Exterior',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop&q=80',
+    image: g1Image,
     alt: 'Professional auto repair shop exterior in Villa Park',
   },
   {
     label: 'Modern Service Bays',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop&q=80',
+    image: g2Image,
     alt: 'Clean and organized service bays with best equipment',
   },
   {
     label: 'Professional Diagnostics',
-    image: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&auto=format&fit=crop&q=80',
+    image: g3Image,
     alt: 'Expert mechanic performing vehicle diagnostics',
   },
   {
     label: 'Expert Technicians',
-    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&auto=format&fit=crop&q=80',
+    image: g4Image,
     alt: 'Experienced auto technician working on vehicle',
   },
   {
     label: 'Quality Workspace',
-    image: 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&auto=format&fit=crop&q=80',
+    image: g5Image,
     alt: 'Well-equipped auto repair workspace',
   },
   {
     label: 'Precision Service',
-    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&auto=format&fit=crop&q=80',
+    image: g6Image,
     alt: 'Mechanic providing precision automotive service',
   },
 ];
