@@ -2,49 +2,22 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { useLocale } from '../providers/LocaleProvider';
 
-const services = [
-  {
-    title: 'Engine Repair',
-    description:
-      'Complete diagnostics, repair, and maintenance for optimal performance.',
-    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80',
-  },
-  {
-    title: 'Brake Service',
-    description:
-      'Expert inspection, pad replacement, and rotor resurfacing services.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-  },
-  {
-    title: 'Battery & Electrical',
-    description:
-      'Professional battery testing, replacement, and charging system diagnostics.',
-    image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&q=80',
-  },
-  {
-    title: 'Air Conditioning',
-    description:
-      'A/C system repair, recharge, and performance optimization.',
-    image: 'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&q=80',
-  },
-  {
-    title: 'Oil Change',
-    description:
-      'Quick and thorough oil changes to keep your engine running smoothly.',
-    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80',
-  },
-  {
-    title: 'Fleet Services',
-    description:
-      'Comprehensive fleet maintenance to keep your business moving.',
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
-  },
+const serviceImages = [
+  'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80',
+  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+  'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&q=80',
+  'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&q=80',
+  'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80',
+  'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
 ];
 
 export default function Services() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const { t, dict } = useLocale();
+  const { items: services } = dict.servicesSection;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,14 +48,13 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
-            Services
+            {t('servicesSection.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
-            Auto Repair Services in Villa Park
+            {t('servicesSection.title')}
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
-            From routine maintenance to complex repairs, we offer comprehensive
-            automotive services for drivers in Villa Park, Illinois and the greater DuPage County area.
+            {t('servicesSection.body')}
           </p>
         </div>
 
@@ -97,7 +69,7 @@ export default function Services() {
             >
               {/* Background Image */}
               <Image
-                src={service.image}
+                src={serviceImages[index]}
                 alt={service.title}
                 fill
                 className={`object-cover transition-transform duration-500 ${
@@ -124,7 +96,7 @@ export default function Services() {
                   href="#contact"
                   className="inline-flex items-center gap-2 text-[var(--qah-accent)] font-medium mt-4 hover:gap-3 transition-all duration-300"
                 >
-                  Get a Quote
+                  {t('servicesSection.cardCta')}
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -150,7 +122,7 @@ export default function Services() {
             href="/services"
             className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 py-4 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium text-lg"
           >
-            View Our Services
+            {t('servicesSection.cta')}
             <svg
               className="w-5 h-5"
               fill="none"

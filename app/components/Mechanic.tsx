@@ -3,15 +3,12 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import mechanicImage from '../assets/selfie.jpg';
-
-const stats = [
-  { label: '10+ Years', sublabel: 'Experience' },
-  { label: 'Same-Day', sublabel: 'Service Available' },
-  { label: 'Warranty', sublabel: 'Included' },
-];
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function Mechanic() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t, dict } = useLocale();
+  const stats = dict.mechanic.stats;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,20 +40,13 @@ export default function Mechanic() {
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
-                Your Mechanic
+                {t('mechanic.eyebrow')}
               </span>
               <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
-                Meet Alexia Quiroz
+                {t('mechanic.title')}
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
-                Hi, I&apos;m Alexia — the owner and sole mechanic at Quiroz Auto Heroes.
-                I grew up in my family&apos;s auto repair shops across the Chicago area,
-                learning the trade from the ground up. With over a decade of hands-on
-                experience, I brought that same Quiroz family standard of excellence
-                to Villa Park. I personally handle every repair that comes through
-                our shop and stay current with the latest automotive technology
-                through ongoing training. When you bring your car here, you work
-                directly with me — no middlemen, just honest, expert service.
+                {t('mechanic.body')}
               </p>
             </div>
 
@@ -65,10 +55,10 @@ export default function Mechanic() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-[var(--qah-accent)]">
-                    {stat.label}
+                    {stat}
                   </div>
                   <div className="text-sm text-[var(--qah-text-body)]/70 mt-1">
-                    {stat.sublabel}
+                    &nbsp;
                   </div>
                 </div>
               ))}
@@ -80,7 +70,7 @@ export default function Mechanic() {
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
               >
-                Get in Touch
+                {t('mechanic.cta')}
                 <svg
                   className="w-4 h-4"
                   fill="none"

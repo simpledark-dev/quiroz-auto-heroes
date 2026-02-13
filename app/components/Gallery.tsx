@@ -8,43 +8,15 @@ import g3Image from '../assets/g3.jpg';
 import g4Image from '../assets/g4.jpg';
 import g5Image from '../assets/g5.jpg';
 import g6Image from '../assets/g6.jpg';
+import { useLocale } from '../providers/LocaleProvider';
 
-const galleryItems = [
-  {
-    label: 'Our Shop Exterior',
-    image: g1Image,
-    alt: 'Professional auto repair shop exterior in Villa Park',
-  },
-  {
-    label: 'Modern Service Bays',
-    image: g2Image,
-    alt: 'Clean and organized service bays with best equipment',
-  },
-  {
-    label: 'Professional Diagnostics',
-    image: g3Image,
-    alt: 'Expert mechanic performing vehicle diagnostics',
-  },
-  {
-    label: 'Expert Technicians',
-    image: g4Image,
-    alt: 'Experienced auto technician working on vehicle',
-  },
-  {
-    label: 'Quality Workspace',
-    image: g5Image,
-    alt: 'Well-equipped auto repair workspace',
-  },
-  {
-    label: 'Precision Service',
-    image: g6Image,
-    alt: 'Mechanic providing precision automotive service',
-  },
-];
+const galleryImages = [g1Image, g2Image, g3Image, g4Image, g5Image, g6Image];
 
 export default function Gallery() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const { t, dict } = useLocale();
+  const { items: galleryItems } = dict.gallery;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -74,14 +46,13 @@ export default function Gallery() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
-            Gallery
+            {t('gallery.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
-            Our Shop & Facility
+            {t('gallery.title')}
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
-            Step inside Quiroz Auto Heroes. Our high-quality, well-equipped facility in Villa Park
-            is designed to provide professional, efficient service in a clean and welcoming environment.
+            {t('gallery.body')}
           </p>
         </div>
 
@@ -96,7 +67,7 @@ export default function Gallery() {
             >
               {/* Image */}
               <Image
-                src={item.image}
+                src={galleryImages[index]}
                 alt={item.alt}
                 fill
                 className={`object-cover transition-transform duration-300 ${

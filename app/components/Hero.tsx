@@ -3,9 +3,11 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import heroImage from '../assets/p6.jpg';
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function Hero() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLocale();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,11 +40,10 @@ export default function Hero() {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
-                Villa Park&apos;s Trusted Auto Repair & Car Repair Experts
+                {t('hero.title')}
               </h1>
               <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
-                Your trusted mechanic in Villa Park, IL. We provide premium auto repair services
-                and car repair for all makes and models, backed by experienced technicians and a commitment to excellence.
+                {t('hero.body')}
               </p>
             </div>
 
@@ -52,7 +53,7 @@ export default function Hero() {
                 href="/services"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
-                Our Services
+                {t('hero.ctaServices')}
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -71,7 +72,7 @@ export default function Hero() {
                 href="tel:6302760478"
                 className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
               >
-                Call Us
+                {t('hero.ctaCall')}
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -103,7 +104,7 @@ export default function Hero() {
                   />
                 </svg>
                 <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  Expert service
+                  {t('hero.badges.ase')}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -115,7 +116,7 @@ export default function Hero() {
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  5-star rated
+                  {t('hero.badges.rating')}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -131,7 +132,7 @@ export default function Hero() {
                   />
                 </svg>
                 <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  Fast turnaround
+                  {t('hero.badges.fast')}
                 </span>
               </div>
             </div>
@@ -150,7 +151,7 @@ export default function Hero() {
             <div className="relative aspect-[4/3] rounded-2xl shadow-2xl overflow-hidden ring-1 ring-white/10">
               <Image
                 src={heroImage}
-                alt="Quiroz Auto Heroes - Expert Auto Repair"
+                alt={t('hero.imageAlt')}
                 fill
                 className="object-cover"
                 priority
@@ -162,7 +163,7 @@ export default function Hero() {
             {/* Floating badge */}
             <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-[var(--qah-accent)] text-white px-5 py-3 rounded-xl shadow-lg">
               <div className="text-2xl md:text-3xl font-bold">10+</div>
-              <div className="text-xs md:text-sm opacity-90">Years Experience</div>
+              <div className="text-xs md:text-sm opacity-90">{t('hero.yearsExperience')}</div>
             </div>
 
             {/* Corner accent */}

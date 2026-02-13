@@ -5,9 +5,12 @@ import Image from 'next/image';
 import aboutImage1 from '../assets/p1.jpg';
 import aboutImage2 from '../assets/p2.jpg';
 import aboutImage3 from '../assets/p3.jpg';
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function About() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t, dict } = useLocale();
+  const features = dict.about.features;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -68,31 +71,20 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4 text-center lg:text-left">
               <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
-                About Us
+                {t('about.eyebrow')}
               </span>
               <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
-                Villa Park&apos;s Neighborhood Auto Repair & Car Repair Shop
+                {t('about.title')}
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
-                Born from the Quiroz family&apos;s legacy in auto repair across the Chicago area,
-                Quiroz Auto Heroes brings over a decade of hands-on expertise to Villa Park.
-                We combine the same trusted craftsmanship our family is known for with
-                honest, transparent service right here on North Avenue. Our experienced
-                auto mechanics use the latest diagnostic equipment to keep your vehicle
-                running safely and efficiently.
+                {t('about.body')}
               </p>
             </div>
 
             {/* Features List */}
-            <ul className="space-y-4 max-w-md mx-auto lg:mx-0 lg:max-w-none">
-              {[
-                'Backed by a family legacy in Chicago-area auto repair',
-                'State-of-the-art diagnostic equipment',
-                'Comprehensive warranty on all repairs',
-                'Transparent pricing with no hidden fees',
-                'Proudly serving Villa Park and DuPage County',
-              ].map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+          <ul className="space-y-4 max-w-md mx-auto lg:mx-0 lg:max-w-none">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-3">
                   <svg
                     className="w-6 h-6 text-[var(--qah-accent)] flex-shrink-0 mt-0.5"
                     fill="currentColor"
@@ -109,7 +101,7 @@ export default function About() {
                   </span>
                 </li>
               ))}
-            </ul>
+          </ul>
 
             {/* CTA Button */}
             <div className="text-center lg:text-left">
@@ -117,7 +109,7 @@ export default function About() {
                 href="/about"
                 className="inline-flex items-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
-                More About Us
+                {t('about.cta')}
                 <svg
                   className="w-4 h-4"
                   fill="none"

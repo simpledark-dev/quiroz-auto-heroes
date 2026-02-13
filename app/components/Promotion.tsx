@@ -3,9 +3,11 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import flyerImage from '../assets/flyer.jpeg';
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function Promotion() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLocale();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,13 +37,13 @@ export default function Promotion() {
         {/* Section Header */}
         <div className="text-center mb-12 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-amber-500 text-white text-sm font-semibold rounded-full">
-            Current Promotions
+            {t('promotion.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
-            Special Offers
+            {t('promotion.title')}
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
-            Take advantage of our current deals on oil changes, brake service, and diagnostics.
+            {t('promotion.body')}
           </p>
         </div>
 
@@ -68,7 +70,7 @@ export default function Promotion() {
             href="#contact"
             className="inline-flex items-center gap-2 bg-amber-500 text-white px-8 py-4 rounded-full hover:bg-amber-600 transition-colors duration-200 font-medium text-lg"
           >
-            Claim Your Offer
+            {t('promotion.cta')}
             <svg
               className="w-5 h-5"
               fill="none"

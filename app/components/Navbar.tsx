@@ -1,27 +1,29 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../assets/quiroz-auto-heroes-logo-1.png';
 import { services } from '../data/services';
 import { vehicles } from '../data/vehicles';
+import { useLocale } from '../providers/LocaleProvider';
 
 type NavLink = {
   href: string;
-  label: string;
+  key: 'home' | 'about' | 'services' | 'vehicles' | 'contact';
   dropdownType?: 'services' | 'vehicles';
 };
 
 const navLinks: NavLink[] = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services', dropdownType: 'services' },
-  { href: '/vehicles', label: 'Vehicles', dropdownType: 'vehicles' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', key: 'home' },
+  { href: '/about', key: 'about' },
+  { href: '/services', key: 'services', dropdownType: 'services' },
+  { href: '/vehicles', key: 'vehicles', dropdownType: 'vehicles' },
+  { href: '/contact', key: 'contact' },
 ];
 
 export default function Navbar() {
+  const { locale, toggle, t } = useLocale();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -99,7 +101,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-3">
             {navLinks.map((link) => {
               if (link.dropdownType === 'services') {
                 return (
@@ -113,7 +115,7 @@ export default function Navbar() {
                       href={link.href}
                       className="relative px-4 py-2 text-[var(--qah-dark)] hover:text-[var(--qah-white)] transition-colors duration-200 group flex items-center gap-1"
                     >
-                      {link.label}
+                      {t(`navbar.${link.key}`)}
                       <svg
                         className="w-3.5 h-3.5 transition-transform duration-200 group-hover/dropdown:rotate-180"
                         fill="none"
@@ -133,7 +135,7 @@ export default function Navbar() {
                             className="flex items-center gap-3 px-4 py-2.5 text-sm text-[var(--qah-dark)] hover:text-[var(--qah-white)] hover:bg-white/5 transition-colors duration-150"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-[var(--qah-accent)] flex-shrink-0" />
-                            {service.shortTitle}
+                            {t(`navbar.serviceNames.${service.slug}`)}
                           </Link>
                         ))}
                         <div className="border-t border-white/10 mt-2 pt-2">
@@ -141,7 +143,7 @@ export default function Navbar() {
                             href="/services"
                             className="flex items-center gap-2 px-4 py-2.5 text-sm text-[var(--qah-accent)] hover:text-[var(--qah-accent-hover)] hover:bg-white/5 transition-colors duration-150 font-medium"
                           >
-                            View Our Services
+                            {t('navbar.services')}
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
@@ -165,7 +167,7 @@ export default function Navbar() {
                       href={link.href}
                       className="relative px-4 py-2 text-[var(--qah-dark)] hover:text-[var(--qah-white)] transition-colors duration-200 group flex items-center gap-1"
                     >
-                      {link.label}
+                      {t(`navbar.${link.key}`)}
                       <svg
                         className="w-3.5 h-3.5 transition-transform duration-200 group-hover/dropdown:rotate-180"
                         fill="none"
@@ -193,7 +195,7 @@ export default function Navbar() {
                             href="/vehicles"
                             className="flex items-center gap-2 px-4 py-2.5 text-sm text-[var(--qah-accent)] hover:text-[var(--qah-accent-hover)] hover:bg-white/5 transition-colors duration-150 font-medium"
                           >
-                            View All Vehicles
+                            {t('navbar.viewAllVehicles')}
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
@@ -211,11 +213,18 @@ export default function Navbar() {
                   href={link.href}
                   className="relative px-4 py-2 text-[var(--qah-dark)] hover:text-[var(--qah-white)] transition-colors duration-200 group"
                 >
-                  {link.label}
+                  {t(`navbar.${link.key}`)}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--qah-accent)] transition-all duration-300 group-hover:w-1/2 rounded-full" />
                 </Link>
               );
             })}
+            <button
+              onClick={toggle}
+              className="px-3 py-2 text-sm font-semibold text-[var(--qah-white)] bg-white/10 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-colors duration-200"
+              aria-label="Toggle language"
+            >
+              {locale === 'en' ? 'ES' : 'EN'}
+            </button>
           </div>
 
           {/* Right side: CTA + Mobile Menu */}
@@ -237,7 +246,7 @@ export default function Navbar() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span className="font-medium">Call Us Now</span>
+              <span className="font-medium">{t('navbar.call')}</span>
             </a>
 
             <button
@@ -274,7 +283,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                     className="flex items-center justify-between w-full px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                   >
-                    <span>{link.label}</span>
+                    <span>{t(`navbar.${link.key}`)}</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`}
                       fill="none"
@@ -302,7 +311,7 @@ export default function Navbar() {
                           className="flex items-center gap-2 px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors duration-150"
                         >
                           <span className="w-1 h-1 rounded-full bg-[var(--qah-accent)]" />
-                          {service.shortTitle}
+                          {t(`navbar.serviceNames.${service.slug}`)}
                         </Link>
                       ))}
                       <Link
@@ -310,7 +319,7 @@ export default function Navbar() {
                         onClick={handleLinkClick}
                         className="flex items-center gap-2 px-4 py-2 text-sm text-[var(--qah-accent)] hover:text-[var(--qah-accent-hover)] font-medium rounded-lg transition-colors duration-150"
                       >
-                        View Our Services
+                        {t('navbar.services')}
                       </Link>
                     </div>
                   </div>
@@ -325,7 +334,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileVehiclesOpen(!isMobileVehiclesOpen)}
                     className="flex items-center justify-between w-full px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                   >
-                    <span>{link.label}</span>
+                    <span>{t(`navbar.${link.key}`)}</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${isMobileVehiclesOpen ? 'rotate-180' : ''}`}
                       fill="none"
@@ -357,7 +366,7 @@ export default function Navbar() {
                         onClick={handleLinkClick}
                         className="flex items-center gap-2 px-4 py-2 text-sm text-[var(--qah-accent)] hover:text-[var(--qah-accent-hover)] font-medium rounded-lg transition-colors duration-150"
                       >
-                        View All Vehicles
+                        {t('navbar.viewAllVehicles')}
                       </Link>
                     </div>
                   </div>
@@ -372,7 +381,7 @@ export default function Navbar() {
                 onClick={handleLinkClick}
                 className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
               >
-                {link.label}
+                {t(`navbar.${link.key}`)}
               </Link>
             );
           })}
@@ -389,7 +398,7 @@ export default function Navbar() {
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
               />
             </svg>
-            Call (630) 276-0478
+            {t('contact.callCta')}
           </a>
         </div>
       </div>

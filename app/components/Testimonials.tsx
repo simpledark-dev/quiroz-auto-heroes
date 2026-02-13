@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useLocale } from '../providers/LocaleProvider';
 
 const testimonials = [
   {
@@ -58,6 +59,7 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLocale();
 
   useEffect(() => {
     const handleResize = () => {
@@ -133,14 +135,13 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
-            Testimonials
+            {t('testimonials.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-white">
-            Trusted by Villa Park Drivers
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what satisfied customers
-            from Villa Park and surrounding Illinois communities have to say.
+            {t('testimonials.body')}
           </p>
         </div>
 

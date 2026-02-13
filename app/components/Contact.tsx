@@ -1,88 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-
-const contactInfo = [
-  {
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
-    label: 'Visit Us',
-    value: '201 W North Ave, Unit 201',
-    value2: 'Villa Park, IL 60181',
-    action: 'Get Directions',
-    link: 'https://maps.google.com/?q=201+W+North+Ave,+Villa+Park,+IL+60181',
-  },
-  {
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-        />
-      </svg>
-    ),
-    label: 'Call Us',
-    value: '(630) 276-0478',
-    action: 'Call Now',
-    link: 'tel:6302760478',
-  },
-  {
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    label: 'Email Us',
-    value: 'quirozautoheroes@gmail.com',
-    action: 'Send Email',
-    link: 'mailto:quirozautoheroes@gmail.com',
-  },
-];
-
-const hours = [
-  { day: 'Monday - Friday', time: '7:30 AM - 5:30 PM' },
-  { day: 'Saturday', time: '7:30 AM - 2:30 PM' },
-  { day: 'Sunday', time: 'Closed' },
-];
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t, dict } = useLocale();
+  const { hoursList } = dict.contact;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -103,6 +27,76 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
+  const contactInfo = [
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+      ),
+      label: t('contact.cards.visit'),
+      value: '201 W North Ave, Unit 201',
+      value2: 'Villa Park, IL 60181',
+      link: 'https://maps.google.com/?q=201+W+North+Ave,+Villa+Park,+IL+60181',
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
+      ),
+      label: t('contact.cards.call'),
+      value: '(630) 276-0478',
+      link: 'tel:6302760478',
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+      label: t('contact.cards.email'),
+      value: 'quirozautoheroes@gmail.com',
+      link: 'mailto:quirozautoheroes@gmail.com',
+    },
+  ];
+
   return (
     <section
       id="contact"
@@ -113,14 +107,13 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
-            Contact Us
+            {t('contact.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">
-            Visit Our Villa Park Location
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-[var(--qah-text-body)] max-w-2xl mx-auto">
-            Stop by our shop on North Avenue in Villa Park, IL or give us a call.
-            We proudly serve drivers from Villa Park, Lombard, Elmhurst, and throughout DuPage County.
+            {t('contact.body')}
           </p>
         </div>
 
@@ -190,10 +183,10 @@ export default function Contact() {
                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span className="font-semibold text-lg">Business Hours</span>
+                <span className="font-semibold text-lg">{t('contact.hours')}</span>
               </div>
               <div className="space-y-2">
-                {hours.map((item, index) => (
+                {hoursList.map((item, index) => (
                   <div key={index} className="flex justify-between text-sm">
                     <span className="text-white/80">{item.day}</span>
                     <span className="font-medium">{item.time}</span>
@@ -235,8 +228,8 @@ export default function Contact() {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="font-semibold text-[var(--qah-text-heading)]">Ready to get started?</div>
-                <div className="text-sm text-[var(--qah-text-body)]">Book your appointment today</div>
+                <div className="font-semibold text-[var(--qah-text-heading)]">{t('contact.ready')}</div>
+                <div className="text-sm text-[var(--qah-text-body)]">{t('contact.book')}</div>
               </div>
             </div>
             <a
@@ -246,7 +239,7 @@ export default function Contact() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Call (630) 276-0478
+              {t('contact.callCta')}
             </a>
           </div>
         </div>

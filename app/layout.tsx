@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 import PromotionModal from './components/PromotionModal';
+import { LocaleProvider } from './providers/LocaleProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -154,8 +155,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <LocaleProvider>
           <PromotionModal />
           {children}
+        </LocaleProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}

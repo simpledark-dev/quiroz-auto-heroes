@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import logo from '../assets/quiroz-auto-heroes-logo-1.png';
+import { useLocale } from '../providers/LocaleProvider';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t, dict } = useLocale();
+  const { hoursList, addressLines, bottomAddress } = dict.footer;
 
   return (
     <footer className="bg-[#0a1628] bg-stars text-white">
@@ -20,36 +25,26 @@ export default function Footer() {
               <span className="text-2xl font-bold">Quiroz Auto Heroes</span>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Part of the Quiroz family&apos;s auto repair legacy across the Chicago area.
-              Our experienced mechanics are committed to excellence and customer satisfaction,
-              providing quality auto repair services to the Villa Park community and neighboring areas throughout DuPage County.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Opening Hours */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Opening Hours</h3>
+            <h3 className="text-xl font-bold">{t('footer.hours')}</h3>
             <div className="space-y-2 text-white/80">
-              <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span className="font-medium text-white">
-                  7:30am - 5:30pm
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span className="font-medium text-white">7:30am - 2:30pm</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span className="font-medium text-white">Closed</span>
-              </div>
+              {hoursList.map((item) => (
+                <div key={item.day} className="flex justify-between">
+                  <span>{item.day}</span>
+                  <span className="font-medium text-white">{item.time}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Quick Contact */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Quick Contact</h3>
+            <h3 className="text-xl font-bold">{t('footer.quick')}</h3>
             <div className="space-y-3 text-white/80">
               <a
                 href="tel:6302760478"
@@ -68,7 +63,7 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                (630) 276-0478
+                {t('footer.phone')}
               </a>
               <a
                 href="mailto:quirozautoheroes@gmail.com"
@@ -87,7 +82,7 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                quirozautoheroes@gmail.com
+                {t('footer.email')}
               </a>
               <div className="flex items-start gap-3">
                 <svg
@@ -110,9 +105,9 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                  201 W North Ave, Unit 201
+                  {addressLines[0]}
                   <br />
-                  Villa Park, IL 60181
+                  {addressLines[1]}
                 </span>
               </div>
             </div>
@@ -125,11 +120,9 @@ export default function Footer() {
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 text-center md:text-left">
             <p>
-              &copy; {currentYear} Quiroz Auto Heroes. All rights reserved.
+              &copy; {currentYear} Quiroz Auto Heroes. {t('footer.rights')}
             </p>
-            <p>
-              201 W North Ave, Unit 201, Villa Park, IL 60181 · (630) 276-0478
-            </p>
+            <p>{bottomAddress}</p>
           </div>
         </div>
       </div>
