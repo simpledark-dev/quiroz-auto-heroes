@@ -674,6 +674,31 @@ export const messages = {
       otherServicesDescription: 'Explore our full range of automotive services for Villa Park and DuPage County drivers.',
       viewAll: 'View Our Services',
     },
+    vehicleDetailPage: {
+      breadcrumb: {
+        home: 'Home',
+        vehicles: 'Vehicles',
+      },
+      badge: 'Vehicle Specialist',
+      titleSuffix: 'Service in Villa Park, IL',
+      description: 'Expert service and repair for all {name} models. Our experienced technicians keep your {name} running at peak performance.',
+      cta: {
+        schedule: 'Schedule Appointment',
+        call: 'Call Now',
+      },
+      aboutTitle: '{name} Vehicle Service & Repair',
+      servicesTitle: 'Our Services for {name}',
+      servicesDescription: 'From routine maintenance to complex repairs, Quiroz Auto Heroes has you covered. Our experienced technicians are equipped to handle all your {name} service needs.',
+      whyChooseTitle: 'Why Choose Quiroz Auto Heroes for Your {name}?',
+      whyChooseText1: '{name} owners throughout Villa Park and DuPage County trust Quiroz Auto Heroes because we combine technical excellence with honest, transparent service. Our experienced technicians receive ongoing training to stay current with the latest {name} repair technologies and techniques.',
+      whyChooseText2: 'Every repair comes with our comprehensive warranty, giving you peace of mind that your {name} is in the best hands. We use quality parts that meet or exceed manufacturer specifications.',
+      otherVehiclesTitle: 'Other Vehicles We Service',
+      otherVehiclesDescription: 'We service all makes and models. Explore our complete list of vehicle brands.',
+      viewAll: 'View All Vehicles',
+    },
+    vehicleData: {
+      items: {},
+    },
   },
   es: {
     navbar: {

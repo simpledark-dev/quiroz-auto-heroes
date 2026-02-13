@@ -10,17 +10,15 @@ interface VehicleDetailContentProps {
 }
 
 export default function VehicleDetailContent({ vehicle }: VehicleDetailContentProps) {
-    const { t } = useLocale();
+    const { dict } = useLocale();
 
-    // Try to get translated description from dict.vehicleData.items[slug].description
-    // If not found, fallback to the original vehicle.description
-    // The t() function returns the key if not found, but we need to check if the *array* exists.
-    // Since t() returns string | string[], we can cast or check type.
-    // However, t() in LocaleProvider returns "key" if missing.
-    // Let's rely on t() behavior: t(`vehicleData.items.${vehicle.slug}.description`) should return the array.
+    // Get translated vehicle description and UI strings
+    const vehicleData = dict.vehicleData;
+    const servicesData = dict.servicesData;
+    const ui = dict.vehicleDetailPage;
 
-    const translatedDescription = t(`vehicleData.items.${vehicle.slug}.description`);
-    const description = Array.isArray(translatedDescription) ? translatedDescription : vehicle.description;
+    const translatedVehicle = vehicleData?.items?.[vehicle.slug as keyof typeof vehicleData.items] as { description?: string[] } | undefined;
+    const description = translatedVehicle?.description || vehicle.description;
 
     return (
         <main className="min-h-screen overflow-x-hidden">
@@ -38,31 +36,31 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                         {/* Breadcrumb */}
                         <nav className="flex items-center justify-center gap-2 text-sm text-[var(--qah-dark)]/60">
                             <Link href="/" className="hover:text-[var(--qah-accent)] transition-colors">
-                                {t('vehicleDetailPage.breadcrumb.home')}
+                                {ui.breadcrumb.home}
                             </Link>
                             <span>/</span>
                             <Link href="/vehicles" className="hover:text-[var(--qah-accent)] transition-colors">
-                                {t('vehicleDetailPage.breadcrumb.vehicles')}
+                                {ui.breadcrumb.vehicles}
                             </Link>
                             <span>/</span>
                             <span className="text-[var(--qah-accent)]">{vehicle.name}</span>
                         </nav>
 
                         <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
-                            {t('vehicleDetailPage.badge')}
+                            {ui.badge}
                         </span>
                         <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
-                            {vehicle.name} {t('vehicleDetailPage.titleSuffix')}
+                            {vehicle.name} {ui.titleSuffix}
                         </h1>
                         <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
-                            {t('vehicleDetailPage.description').replace(/{name}/g, vehicle.name)}
+                            {ui.description.replace(/{name}/g, vehicle.name)}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                             <a
                                 href="#contact"
                                 className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
                             >
-                                {t('vehicleDetailPage.cta.schedule')}
+                                {ui.cta.schedule}
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
@@ -79,7 +77,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                     />
                                 </svg>
-                                {t('vehicleDetailPage.cta.call')}
+                                {ui.cta.call}
                             </a>
                         </div>
                     </div>
@@ -94,7 +92,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                             {/* About This Vehicle */}
                             <div className="space-y-4">
                                 <h2 className="text-[28px] md:text-[32px] font-bold text-[var(--qah-text-heading)] leading-tight">
-                                    {t('vehicleDetailPage.aboutTitle').replace(/{name}/g, vehicle.name)}
+                                    {ui.aboutTitle.replace(/{name}/g, vehicle.name)}
                                 </h2>
                                 {description.map((paragraph: string, i: number) => (
                                     <p key={i} className="text-[var(--qah-text-body)] leading-relaxed">
@@ -109,10 +107,10 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-[var(--qah-accent)]/10 rounded-full blur-3xl" />
                                 <div className="relative z-10 space-y-6">
                                     <h3 className="text-[24px] md:text-[28px] font-bold">
-                                        {t('vehicleDetailPage.servicesTitle').replace(/{name}/g, vehicle.name)}
+                                        {ui.servicesTitle.replace(/{name}/g, vehicle.name)}
                                     </h3>
                                     <p className="text-white/85 leading-relaxed">
-                                        {t('vehicleDetailPage.servicesDescription').replace(/{name}/g, vehicle.name)}
+                                        {ui.servicesDescription.replace(/{name}/g, vehicle.name)}
                                     </p>
                                     <div className="grid sm:grid-cols-2 gap-3">
                                         {services.map((service) => (
@@ -133,10 +131,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                                                     />
                                                 </svg>
                                                 <span className="text-sm font-medium text-white/90">
-                                                    {/* Use service title translation if available, else shortTitle */}
-                                                    {t(`servicesData.items.${service.slug}.title`) !== `servicesData.items.${service.slug}.title`
-                                                        ? t(`servicesData.items.${service.slug}.title`).split(' ').slice(0, 3).join(' ') // Hacky, better to have shortTitle in messages
-                                                        : service.shortTitle}
+                                                    {servicesData.items[service.slug as keyof typeof servicesData.items]?.title.split(' ').slice(0, 3).join(' ') || service.shortTitle}
                                                 </span>
                                             </Link>
                                         ))}
@@ -147,13 +142,13 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                             {/* Why Choose Us */}
                             <div className="space-y-4">
                                 <h3 className="text-[24px] md:text-[28px] font-bold text-[var(--qah-text-heading)]">
-                                    {t('vehicleDetailPage.whyChooseTitle').replace(/{name}/g, vehicle.name)}
+                                    {ui.whyChooseTitle.replace(/{name}/g, vehicle.name)}
                                 </h3>
                                 <p className="text-[var(--qah-text-body)] leading-relaxed">
-                                    {t('vehicleDetailPage.whyChooseText1').replace(/{name}/g, vehicle.name)}
+                                    {ui.whyChooseText1.replace(/{name}/g, vehicle.name)}
                                 </p>
                                 <p className="text-[var(--qah-text-body)] leading-relaxed">
-                                    {t('vehicleDetailPage.whyChooseText2').replace(/{name}/g, vehicle.name)}
+                                    {ui.whyChooseText2.replace(/{name}/g, vehicle.name)}
                                 </p>
                                 <a
                                     href="tel:6302760478"
@@ -167,7 +162,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                         />
                                     </svg>
-                                    {t('vehicleDetailPage.cta.call')}
+                                    {ui.cta.call}
                                 </a>
                             </div>
                         </div>
@@ -180,10 +175,10 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="text-center mb-10">
                         <h2 className="text-[28px] md:text-[36px] font-bold text-[var(--qah-white)]">
-                            {t('vehicleDetailPage.otherVehiclesTitle')}
+                            {ui.otherVehiclesTitle}
                         </h2>
                         <p className="mt-3 text-[var(--qah-dark)]/70 max-w-2xl mx-auto">
-                            {t('vehicleDetailPage.otherVehiclesDescription')}
+                            {ui.otherVehiclesDescription}
                         </p>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -207,7 +202,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                             href="/vehicles"
                             className="inline-flex items-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200 font-medium"
                         >
-                            {t('vehicleDetailPage.viewAll')}
+                            {ui.viewAll}
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
