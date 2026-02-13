@@ -101,6 +101,8 @@ export const messages = {
       title: 'Special Offers',
       body: 'Take advantage of our current deals on oil changes, brake service, and diagnostics.',
       cta: 'Claim Your Offer',
+      modalTitle: 'Special Offers',
+      limitedTime: 'Limited Time Only - Offer Valid for 2 Months',
     },
     contact: {
       eyebrow: 'Contact Us',
@@ -696,6 +698,15 @@ export const messages = {
       otherVehiclesDescription: 'We service all makes and models. Explore our complete list of vehicle brands.',
       viewAll: 'View All Vehicles',
     },
+    contactPage: {
+      breadcrumb: {
+        home: 'Home',
+        contact: 'Contact',
+      },
+      badge: 'Get In Touch',
+      title: 'Contact Your Villa Park Auto Repair Mechanic',
+      description: "Ready to schedule your auto repair or car repair service? Reach out to our experienced mechanic by phone, email, or visit our Villa Park location. We're here to help with all your automotive needs.",
+    },
     vehicleData: {
       items: {},
     },
@@ -802,6 +813,8 @@ export const messages = {
       title: 'Ofertas especiales',
       body: 'Aprovecha nuestras ofertas actuales en cambios de aceite, servicio de frenos y diagnósticos.',
       cta: 'Reclamar oferta',
+      modalTitle: 'Ofertas Especiales',
+      limitedTime: 'Tiempo Limitado - Oferta Válida por 2 Meses',
     },
     contact: {
       eyebrow: 'Contáctanos',
@@ -1388,6 +1401,15 @@ export const messages = {
     otherVehiclesTitle: 'Otros Vehículos que Atendemos',
     otherVehiclesDescription: 'Atendemos todas las marcas y modelos. Explore nuestra lista completa de marcas de vehículos.',
     viewAll: 'Ver Todos los Vehículos',
+  },
+  contactPage: {
+    breadcrumb: {
+      home: 'Inicio',
+      contact: 'Contacto',
+    },
+    badge: 'Contáctanos',
+    title: 'Contacta a Tu Mecánico de Reparación de Autos en Villa Park',
+    description: '¿Listo para programar tu servicio de reparación de autos? Comunícate con nuestro mecánico experimentado por teléfono, correo electrónico o visita nuestra ubicación en Villa Park. Estamos aquí para ayudarte con todas tus necesidades automotrices.',
   },
   vehicleData: {
     items: {
