@@ -4,7 +4,7 @@
   /* Brand Colors — matched to logo */
   --qah-primary: #0a1628;
   --qah-accent: #0C4DAD;
-  --qah-accent-hover: #D07B1A;
+  --qah-accent-hover: #b8c8dc;
 
   /* Dark section backgrounds */
   --qah-light: #060e1c;
@@ -60,11 +60,13 @@
   }
 }
 
-/* Stars background for dark sections */
+/* Stars background for dark sections — overlay baked into the background layer */
 .bg-stars {
-  background-image: url('/stars.png');
-  background-repeat: repeat;
-  background-size: 600px;
+  background-image:
+    linear-gradient(rgba(6, 14, 28, 0.6), rgba(6, 14, 28, 0.6)),
+    url('/stars.png');
+  background-size: cover, 600px;
+  background-repeat: no-repeat, repeat;
 }
 
 @media (prefers-reduced-motion: reduce) {
