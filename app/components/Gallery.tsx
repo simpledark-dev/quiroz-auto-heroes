@@ -68,7 +68,7 @@ export default function Gallery() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 bg-[var(--qah-light)] opacity-0"
+      className="py-16 md:py-24 bg-[var(--qah-light)] bg-stars opacity-0"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         {/* Section Header */}

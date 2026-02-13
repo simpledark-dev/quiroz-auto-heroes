@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
-  --qah-primary: #002865;
-  --qah-accent: #0460DD;
-  --qah-accent-hover: #0350BB;
+  /* Brand Colors — matched to logo */
+  --qah-primary: #0a1628;
+  --qah-accent: #0C4DAD;
+  --qah-accent-hover: #D07B1A;
 
-  /* Dark-themed section backgrounds */
-  --qah-light: #0a1628;
+  /* Dark section backgrounds */
+  --qah-light: #060e1c;
   --qah-card: #0f2040;
 
   /* Text on dark backgrounds */
   --qah-white: #ffffff;
-  --qah-dark: #c0c8d4;
+  --qah-dark: #b8c8dc;
 
   /* Light section backgrounds */
-  --qah-section-light: #f8fafb;
+  --qah-section-light: #f0f4f8;
 
   /* Text on light backgrounds */
-  --qah-text-heading: #0f172a;
-  --qah-text-body: #475569;
+  --qah-text-heading: #0a1628;
+  --qah-text-body: #3a4e6a;
 }
 
 /* Scroll animation */
@@ -38,11 +38,45 @@
   animation: fadeInUp 400ms ease-out forwards;
 }
 
+/* Galaxy shimmer animation */
+@keyframes galaxyShimmer {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Glow pulse animation */
+@keyframes cosmicPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(232, 145, 42, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(232, 145, 42, 0.5);
+  }
+}
+
+/* Stars background for dark sections */
+.bg-stars {
+  background-image: url('/stars.png');
+  background-repeat: repeat;
+  background-size: 600px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
 

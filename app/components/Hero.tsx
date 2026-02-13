@@ -30,7 +30,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] opacity-0"
+      className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] bg-stars opacity-0"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

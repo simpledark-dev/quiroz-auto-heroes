@@ -107,9 +107,29 @@ export default function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gradient-to-br from-[var(--qah-primary)] to-[#001a45] opacity-0"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-[var(--qah-primary)] to-[#0c2244] bg-stars opacity-0 overflow-hidden"
     >
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+      {/* Decorative Elements */}
+      <div className="absolute top-10 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--qah-accent)]/10 rounded-full blur-3xl" />
+
+      {/* Diagonal Lines */}
+      <div className="absolute top-1/4 left-10 w-40 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -rotate-12 hidden lg:block" />
+      <div className="absolute bottom-1/4 right-10 w-48 h-px bg-gradient-to-r from-transparent via-[var(--qah-accent)]/30 to-transparent rotate-12 hidden lg:block" />
+
+      {/* Geometric Shapes */}
+      <div className="absolute top-20 left-1/4 w-12 h-12 border border-white/10 rotate-45 hidden lg:block" />
+      <div className="absolute bottom-20 right-1/4 w-16 h-16 border border-[var(--qah-accent)]/20 rounded-full hidden lg:block" />
+
+      {/* Small Dots */}
+      <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-white/20 rounded-full hidden lg:block" />
+      <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-[var(--qah-accent)]/30 rounded-full hidden lg:block" />
+
+      {/* Corner Brackets */}
+      <div className="absolute top-16 left-16 w-10 h-10 border-l border-t border-white/15 hidden md:block" />
+      <div className="absolute bottom-16 right-16 w-10 h-10 border-r border-b border-[var(--qah-accent)]/20 hidden md:block" />
+
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
