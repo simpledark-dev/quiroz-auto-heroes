@@ -71,11 +71,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[var(--qah-card)]/98 backdrop-blur-md shadow-lg border-b border-white/5'
-          : 'bg-gradient-to-b from-[var(--qah-light)]/80 to-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-[var(--qah-card)]/98 backdrop-blur-md shadow-lg border-b border-white/5'
+        : 'bg-gradient-to-b from-[var(--qah-light)]/80 to-transparent'
+        }`}
     >
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -250,6 +249,14 @@ export default function Navbar() {
             </a>
 
             <button
+              onClick={toggle}
+              className="lg:hidden px-3 py-2 text-sm font-semibold text-[var(--qah-white)] bg-white/10 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-colors duration-200"
+              aria-label="Toggle language"
+            >
+              {locale === 'en' ? 'ES' : 'EN'}
+            </button>
+
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--qah-card)]/50 text-[var(--qah-white)] hover:bg-[var(--qah-accent)] transition-colors duration-200"
               aria-label="Toggle mobile menu"
@@ -270,9 +277,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="bg-[var(--qah-primary)] border-t border-white/10 px-6 py-4 space-y-2">
           {navLinks.map((link) => {
@@ -294,14 +300,12 @@ export default function Navbar() {
                     </svg>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      isMobileServicesOpen ? 'max-h-[70vh] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                    className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[70vh] opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                   >
                     <div
-                      className={`pl-4 py-1 space-y-1 ${
-                        isMobileServicesOpen ? 'overflow-y-auto pr-2 max-h-[70vh]' : ''
-                      }`}
+                      className={`pl-4 py-1 space-y-1 ${isMobileServicesOpen ? 'overflow-y-auto pr-2 max-h-[70vh]' : ''
+                        }`}
                     >
                       {services.map((service) => (
                         <Link
@@ -345,9 +349,8 @@ export default function Navbar() {
                     </svg>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      isMobileVehiclesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                    className={`overflow-hidden transition-all duration-300 ${isMobileVehiclesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                   >
                     <div className="pl-4 py-1 space-y-1 max-h-[400px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
                       {vehicles.map((vehicle) => (
@@ -385,6 +388,9 @@ export default function Navbar() {
               </Link>
             );
           })}
+
+
+
           <a
             href="tel:6302760478"
             onClick={handleLinkClick}
