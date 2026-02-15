@@ -37,7 +37,7 @@ export default function ServicesContent() {
 
   return (
     <>
-      <section ref={heroRef} className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] opacity-0">
+      <section ref={heroRef} className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] bg-stars opacity-0">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto space-y-6">
             <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">

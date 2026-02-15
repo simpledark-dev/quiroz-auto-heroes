@@ -18,7 +18,7 @@ export default function AboutContent() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] overflow-hidden">
+            <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] bg-stars overflow-hidden">
                 <div className="absolute inset-y-0 right-0 w-1/2 bg-[var(--qah-primary)]/20 blur-3xl" />
                 <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[var(--qah-accent)]/20 rounded-full blur-[120px]" />
 
@@ -111,7 +111,7 @@ export default function AboutContent() {
             </section>
 
             {/* Stats Section */}
-            <section className="py-16 md:py-24 bg-[var(--qah-light)]">
+            <section className="py-16 md:py-24 bg-[var(--qah-light)] bg-stars">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="text-center mb-12 space-y-4">
                         <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">

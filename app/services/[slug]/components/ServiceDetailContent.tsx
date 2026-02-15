@@ -34,7 +34,7 @@ export default function ServiceDetailContent({ service }: ServiceDetailContentPr
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-[var(--qah-light)] overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-[var(--qah-light)] bg-stars overflow-hidden">
         {/* Background decorations */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--qah-accent)]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-[var(--qah-accent)]/3 rounded-full blur-3xl" />
@@ -214,7 +214,7 @@ export default function ServiceDetailContent({ service }: ServiceDetailContentPr
       </section>
 
       {/* View Other Services */}
-      <section className="py-16 md:py-20 bg-[var(--qah-light)]">
+      <section className="py-16 md:py-20 bg-[var(--qah-light)] bg-stars">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <div className="text-center mb-10">
             <h2 className="text-[28px] md:text-[36px] font-bold text-[var(--qah-white)]">

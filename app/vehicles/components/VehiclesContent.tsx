@@ -10,7 +10,7 @@ export default function VehiclesContent() {
     return (
         <>
             {/* Hero Banner */}
-            <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-[var(--qah-light)] overflow-hidden">
+            <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-[var(--qah-light)] bg-stars overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--qah-accent)]/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-[var(--qah-accent)]/3 rounded-full blur-3xl" />
 
@@ -67,7 +67,7 @@ export default function VehiclesContent() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 md:py-20 bg-[var(--qah-light)]">
+            <section className="py-16 md:py-20 bg-[var(--qah-light)] bg-stars">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="bg-gradient-to-br from-[var(--qah-primary)] to-[var(--qah-primary)]/90 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--qah-accent)]/15 rounded-full blur-3xl" />

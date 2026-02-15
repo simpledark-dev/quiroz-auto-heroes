@@ -63,21 +63,15 @@
 /* Bounce animation for promotion flyer */
 @keyframes bounceFloat {
   0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  25% {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-12px) scale(1.03);
-  }
-  75% {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-10px);
   }
 }
 
 .animate-bounce-float {
-  animation: bounceFloat 2.5s ease-in-out infinite;
+  animation: bounceFloat 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Animated border glow effect */
@@ -112,7 +106,7 @@
 /* Stars background for dark sections — overlay baked into the background layer */
 .bg-stars {
   background-image:
-    linear-gradient(rgba(6, 14, 28, 0.6), rgba(6, 14, 28, 0.6)),
+    linear-gradient(rgba(6, 14, 28, 0.5), rgba(6, 14, 28, 0.5)),
     url('/stars.png');
   background-size: cover, 600px;
   background-repeat: no-repeat, repeat;
