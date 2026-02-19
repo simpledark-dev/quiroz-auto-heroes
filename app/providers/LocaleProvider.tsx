@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useContext, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { messages } from '@/lib/i18n/messages';
 
 type Locale = 'en' | 'es';
@@ -15,9 +15,12 @@ type LocaleContextValue = {
 const LocaleContext = createContext<LocaleContextValue | undefined>(undefined);
 
 const STORAGE_KEY = 'qah-locale';
+const FADE_MS = 180;
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<Locale>('en');
+  const [opacity, setOpacity] = useState(1);
+  const busy = useRef(false);
 
   useEffect(() => {
     const stored = typeof window !== 'undefined' ? (localStorage.getItem(STORAGE_KEY) as Locale | null) : null;
@@ -33,7 +36,18 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
     }
   }, [locale]);
 
-  const toggle = () => setLocale((prev) => (prev === 'en' ? 'es' : 'en'));
+  const toggle = useCallback(() => {
+    if (busy.current) return;
+    busy.current = true;
+    setOpacity(0);
+    setTimeout(() => {
+      setLocale((prev) => (prev === 'en' ? 'es' : 'en'));
+      requestAnimationFrame(() => {
+        setOpacity(1);
+        setTimeout(() => { busy.current = false; }, FADE_MS);
+      });
+    }, FADE_MS);
+  }, []);
 
   const dict = useMemo(() => messages[locale], [locale]);
   const t = useMemo(() => {
@@ -46,7 +60,18 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo(() => ({ locale, toggle, t, dict }), [locale, toggle, t, dict]);
 
-  return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
+  return (
+    <LocaleContext.Provider value={value}>
+      <div
+        style={{
+          opacity,
+          transition: `opacity ${FADE_MS}ms ease`,
+        }}
+      >
+        {children}
+      </div>
+    </LocaleContext.Provider>
+  );
 }
 
 export function useLocale() {

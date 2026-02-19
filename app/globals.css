@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  background-color: var(--qah-light);
+}
+
 :root {
   /* Brand Colors — matched to logo */
   --qah-primary: #0a1628;
