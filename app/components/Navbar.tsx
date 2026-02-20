@@ -10,7 +10,7 @@ import { useLocale } from '../providers/LocaleProvider';
 
 type NavLink = {
   href: string;
-  key: 'home' | 'about' | 'services' | 'vehicles' | 'contact';
+  key: 'home' | 'about' | 'services' | 'vehicles' | 'promotions' | 'contact';
   dropdownType?: 'services' | 'vehicles';
 };
 
@@ -19,6 +19,7 @@ const navLinks: NavLink[] = [
   { href: '/about', key: 'about' },
   { href: '/services', key: 'services', dropdownType: 'services' },
   { href: '/vehicles', key: 'vehicles', dropdownType: 'vehicles' },
+  { href: '/promotions', key: 'promotions' },
   { href: '/contact', key: 'contact' },
 ];
 
@@ -81,22 +82,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group"
+            className="flex items-center group"
           >
-            <div className="relative">
-              <Image
-                src={logo}
-                alt="Quiroz Auto Heroes"
-                height={48}
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-xl font-bold text-[var(--qah-white)] group-hover:text-[var(--qah-accent)] transition-colors duration-200">
-                Quiroz Auto Heroes
-              </span>
-            </div>
+            <Image
+              src={logo}
+              alt="Quiroz Auto Heroes"
+              height={56}
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

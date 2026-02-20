@@ -5,6 +5,7 @@ export const messages = {
       about: 'About',
       services: 'Services',
       vehicles: 'Vehicles',
+      promotions: 'Promotions',
       contact: 'Contact',
       call: 'Call Us Now',
       viewAllVehicles: 'View All Vehicles',
@@ -103,6 +104,10 @@ export const messages = {
       cta: 'Claim Your Offer',
       modalTitle: 'Special Offers',
       limitedTime: 'Limited Time Only - Offer Valid for 2 Months',
+    },
+    promotionsPage: {
+      heroTitle: 'Promotions & Special Offers',
+      heroBody: 'Save on auto repair with our latest deals. From oil changes to brake service, take advantage of limited-time offers at Quiroz Auto Heroes in Villa Park.',
     },
     contact: {
       eyebrow: 'Contact Us',
@@ -717,6 +722,7 @@ export const messages = {
       about: 'Nosotros',
       services: 'Servicios',
       vehicles: 'Vehículos',
+      promotions: 'Promociones',
       contact: 'Contacto',
       call: 'Llámanos',
       viewAllVehicles: 'Ver todos los vehículos',
@@ -815,6 +821,10 @@ export const messages = {
       cta: 'Reclamar oferta',
       modalTitle: 'Ofertas Especiales',
       limitedTime: 'Tiempo Limitado - Oferta Válida por 2 Meses',
+    },
+    promotionsPage: {
+      heroTitle: 'Promociones y ofertas especiales',
+      heroBody: 'Ahorra en reparación automotriz con nuestras últimas ofertas. Desde cambios de aceite hasta servicio de frenos, aprovecha las promociones por tiempo limitado en Quiroz Auto Heroes en Villa Park.',
     },
     contact: {
       eyebrow: 'Contáctanos',

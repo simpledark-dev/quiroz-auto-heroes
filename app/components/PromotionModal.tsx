@@ -1,15 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import flyerImage from '../assets/flyer.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function PromotionModal() {
   const [isOpen, setIsOpen] = useState(true);
+  const pathname = usePathname();
   const { t } = useLocale();
 
-  if (!isOpen) return null;
+  if (!isOpen || pathname === '/promotions') return null;
 
   return (
     <div
