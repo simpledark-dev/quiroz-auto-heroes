@@ -6,11 +6,11 @@ import g1Image from '../assets/g1.jpg';
 import g2Image from '../assets/g2.png';
 import g3Image from '../assets/g3.jpg';
 import g4Image from '../assets/g4.jpg';
-import g5Image from '../assets/g5.jpg';
-import g6Image from '../assets/g6.jpg';
+import shop1Image from '../assets/shop-1.jpeg';
+import shop2Image from '../assets/shop-2.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
-const galleryImages = [g1Image, g2Image, g3Image, g4Image, g5Image, g6Image];
+const galleryImages = [g1Image, g2Image, g3Image, g4Image, shop1Image, shop2Image];
 
 export default function Gallery() {
   const sectionRef = useRef<HTMLDivElement>(null);

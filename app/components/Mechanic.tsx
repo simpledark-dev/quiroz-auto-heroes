@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import mechanicImage from '../assets/selfie.jpg';
+import mechanicImage from '../assets/owner.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function Mechanic() {
@@ -101,7 +101,7 @@ export default function Mechanic() {
             <div className="relative aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/5">
               <Image
                 src={mechanicImage}
-                alt="Alexia Quiroz - Owner and Mechanic at Quiroz Auto Heroes"
+                alt="Alexia Quiroz - Owner of Quiroz Auto Heroes"
                 fill
                 className="object-cover"
               />

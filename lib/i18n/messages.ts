@@ -74,7 +74,7 @@ export const messages = {
       eyebrow: 'Your Mechanic',
       title: 'Meet Alexia Quiroz',
       body:
-        'Hi, I\'m Alexia — the owner and sole mechanic at Quiroz Auto Heroes. With over a decade of hands-on experience, I personally handle every repair that comes through our Villa Park shop. I stay current with the latest automotive technology and maintain ASE certifications to ensure your vehicle receives the highest quality care.',
+        'Hi, I\'m Alexia — the owner of Quiroz Auto Heroes. With over a decade of hands-on experience, I personally oversee every repair that comes through our Villa Park shop. I stay current with the latest automotive technology and maintain ASE certifications to ensure your vehicle receives the highest quality care.',
       stats: ['10+ Years', 'Same-Day', 'Warranty'],
       cta: 'Get in Touch',
     },
@@ -791,7 +791,7 @@ export const messages = {
       eyebrow: 'Tu mecánica',
       title: 'Conoce a Alexia Quiroz',
       body:
-        'Hola, soy Alexia — dueña y mecánica de Quiroz Auto Heroes. Con más de diez años de experiencia, personalmente atiendo cada reparación que entra al taller. Me mantengo al día con la tecnología automotriz y certificaciones ASE para cuidar tu vehículo con la máxima calidad.',
+        'Hola, soy Alexia — propietaria de Quiroz Auto Heroes. Con más de diez años de experiencia, personalmente superviso cada reparación que entra al taller. Me mantengo al día con la tecnología automotriz y certificaciones ASE para cuidar tu vehículo con la máxima calidad.',
       stats: ['10+ Años', 'Servicio Mismo Día', 'Garantía'],
       cta: 'Hablemos',
     },
