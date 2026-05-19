@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import logo from '../assets/quiroz-auto-heroes-logo-1.png';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function Footer() {
@@ -10,19 +8,16 @@ export default function Footer() {
   const { hoursList, addressLines, bottomAddress } = dict.footer;
 
   return (
-    <footer className="bg-[#0a1628] bg-stars text-white">
+    <footer className="bg-[var(--qah-light)] bg-stars text-white">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo and Description */}
           <div className="space-y-4 text-center md:text-left md:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 justify-center md:justify-start">
-              <Image
-                src={logo}
-                alt="Quiroz Auto Heroes"
-                height={40}
-                className="h-10 w-auto"
-              />
-              <span className="text-2xl font-bold">Quiroz Auto Heroes</span>
+              <span className="flex items-center justify-center w-10 h-10 rounded-md bg-[var(--qah-accent)] border border-white/20 shadow-md">
+                <span className="font-black text-white text-lg tracking-tight">Q</span>
+              </span>
+              <span className="text-2xl font-bold">Quiroz Auto Repair</span>
             </div>
             <p className="text-white/80 leading-relaxed">
               {t('footer.description')}
@@ -47,7 +42,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold">{t('footer.quick')}</h3>
             <div className="space-y-3 text-white/80">
               <a
-                href="tel:6302760478"
+                href="tel:7086524669"
                 className="flex items-center gap-3 hover:text-[var(--qah-accent)] transition-colors duration-200"
               >
                 <svg
@@ -66,7 +61,7 @@ export default function Footer() {
                 {t('footer.phone')}
               </a>
               <a
-                href="mailto:quirozautoheroes@gmail.com"
+                href="mailto:info@quirozautorepairs.com"
                 className="flex items-center gap-3 hover:text-[var(--qah-accent)] transition-colors duration-200"
               >
                 <svg
@@ -120,7 +115,7 @@ export default function Footer() {
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 text-center md:text-left">
             <p>
-              &copy; {currentYear} Quiroz Auto Heroes. {t('footer.rights')}
+              &copy; {currentYear} Quiroz Auto Repair. {t('footer.rights')}
             </p>
             <p>{bottomAddress}</p>
           </div>

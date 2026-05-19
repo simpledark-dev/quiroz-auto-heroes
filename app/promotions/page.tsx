@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import PromotionsContent from './components/PromotionsContent';
 
 export const metadata: Metadata = {
-  title: 'Promotions & Special Offers | Quiroz Auto Heroes',
+  title: 'Promotions & Special Offers | Quiroz Auto Repair',
   description:
-    'Save on auto repair with our latest deals. Oil changes, brake service, diagnostics and more at Quiroz Auto Heroes in Villa Park, IL.',
+    'Save on auto repair with our latest deals. Oil changes, brake service, diagnostics and more at Quiroz Auto Repair in Cicero, IL.',
   alternates: { canonical: '/promotions' },
   openGraph: { url: absoluteUrl('/promotions') },
 };

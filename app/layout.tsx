@@ -1,30 +1,29 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
-import PromotionModal from './components/PromotionModal';
 import { LocaleProvider } from './providers/LocaleProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const businessDescription =
-  'Expert auto repair and car repair shop in Villa Park, IL offering diagnostics, brake repair, fleet maintenance, and same-day service with transparent pricing.';
+  'Expert auto repair and car repair shop in Cicero, IL offering diagnostics, brake repair, fleet maintenance, and same-day service with transparent pricing.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Quiroz Auto Heroes | Premium Auto Repair in Villa Park, IL',
-    template: '%s | Quiroz Auto Heroes',
+    default: 'Quiroz Auto Repair | Premium Auto Repair in Cicero, IL',
+    template: '%s | Quiroz Auto Repair',
   },
   description: businessDescription,
   keywords: [
-    'auto repair Villa Park',
-    'car repair Villa Park IL',
-    'mechanic Villa Park',
-    'car maintenance DuPage County',
+    'auto repair Cicero',
+    'car repair Cicero IL',
+    'mechanic Cicero',
+    'car maintenance Cook County',
     'fleet service Illinois',
-    'brake repair Villa Park',
+    'brake repair Cicero',
     'auto repair near me',
-    'oil change Villa Park',
+    'oil change Cicero',
   ],
   alternates: {
     canonical: '/',
@@ -32,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: 'Quiroz Auto Heroes | Premium Auto Repair in Villa Park, IL',
+    title: 'Quiroz Auto Repair | Premium Auto Repair in Cicero, IL',
     description: businessDescription,
-    siteName: 'Quiroz Auto Heroes',
+    siteName: 'Quiroz Auto Repair',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quiroz Auto Heroes | Premium Auto Repair in Villa Park, IL',
+    title: 'Quiroz Auto Repair | Premium Auto Repair in Cicero, IL',
     description: businessDescription,
   },
   robots: {
@@ -52,15 +51,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-snippet': -1,
     },
-  },
-  icons: {
-    icon: [
-      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-    ],
   },
   manifest: '/site.webmanifest',
 };
@@ -75,31 +65,31 @@ const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AutoRepair',
   '@id': `${SITE_URL}/#business`,
-  name: 'Quiroz Auto Heroes',
-  image: absoluteUrl('/icon-512x512.png'),
+  name: 'Quiroz Auto Repair',
+  image: absoluteUrl('/apple-icon'),
   url: SITE_URL,
-  telephone: '+1-630-276-0478',
-  email: 'quirozautoheroes@gmail.com',
+  telephone: '+1-708-652-4669',
+  email: 'info@quirozautorepairs.com',
   priceRange: '$$',
-  description: 'Expert auto repair and car repair mechanic in Villa Park, IL. Offering diagnostics, brake repair, oil changes, fleet maintenance, and same-day service.',
+  description: 'Expert auto repair and car repair mechanic in Cicero, IL. Offering diagnostics, brake repair, oil changes, fleet maintenance, and same-day service.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '201 W North Ave, Unit 201',
-    addressLocality: 'Villa Park',
+    streetAddress: '6027 W 26th St',
+    addressLocality: 'Cicero',
     addressRegion: 'IL',
-    postalCode: '60181',
+    postalCode: '60804',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 41.89,
-    longitude: -87.98,
+    latitude: 41.844,
+    longitude: -87.768,
   },
   areaServed: [
-    { '@type': 'City', name: 'Villa Park' },
-    { '@type': 'City', name: 'Lombard' },
-    { '@type': 'City', name: 'Elmhurst' },
-    { '@type': 'AdministrativeArea', name: 'DuPage County' },
+    { '@type': 'City', name: 'Cicero' },
+    { '@type': 'City', name: 'Berwyn' },
+    { '@type': 'City', name: 'Oak Park' },
+    { '@type': 'AdministrativeArea', name: 'Cook County' },
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -125,25 +115,25 @@ const localBusinessJsonLd = {
       '@type': 'Review',
       author: { '@type': 'Person', name: 'David Thompson' },
       reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: 'Fast turnaround, quality work, and great communication. Quiroz Auto Heroes has earned my trust and loyalty.',
+      reviewBody: 'Fast turnaround, quality work, and great communication. Quiroz Auto Repair has earned my trust and loyalty.',
     },
   ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '07:30',
-      closes: '17:30',
+      opens: '08:00',
+      closes: '18:00',
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: 'Saturday',
-      opens: '07:30',
-      closes: '14:30',
+      opens: '08:00',
+      closes: '17:00',
     },
   ],
   sameAs: [
-    'https://maps.google.com/?q=201+W+North+Ave,+Villa+Park,+IL+60181',
+    'https://www.google.com/maps/place/Quiroz+Auto+Repair+No.+2/data=!4m2!3m1!1s0x0:0x5f71255b193ea3df?sa=X&ved=1t:2428&ictx=111',
   ],
 };
 
@@ -156,7 +146,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <LocaleProvider>
-          <PromotionModal />
           {children}
         </LocaleProvider>
         <script

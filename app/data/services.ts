@@ -34,8 +34,8 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=800&q=80',
     content: {
       intro: [
-        "As the summer warmth intensifies across Illinois, the importance of an efficient car air conditioning system becomes paramount. Quiroz Auto Heroes, located in Villa Park, is dedicated to ensuring that your vehicle's air conditioning system performs at its peak, offering you relief from the external heat. Our commitment to quality service and customer satisfaction has solidified our position as a trusted name in the region.",
-        "At Quiroz Auto Heroes, we are renowned for our meticulous diagnostic procedures. Our team of skilled technicians utilizes cutting-edge tools to accurately identify any issues with your air conditioning system. From tracing minor refrigerant leaks to detecting complex malfunctions, our comprehensive approach ensures that problems are pinpointed and resolved at their root.",
+        "As the summer warmth intensifies across Illinois, the importance of an efficient car air conditioning system becomes paramount. Quiroz Auto Repair, located in Cicero, is dedicated to ensuring that your vehicle's air conditioning system performs at its peak, offering you relief from the external heat. Our commitment to quality service and customer satisfaction has solidified our position as a trusted name in the region.",
+        "At Quiroz Auto Repair, we are renowned for our meticulous diagnostic procedures. Our team of skilled technicians utilizes cutting-edge tools to accurately identify any issues with your air conditioning system. From tracing minor refrigerant leaks to detecting complex malfunctions, our comprehensive approach ensures that problems are pinpointed and resolved at their root.",
       ],
       servicesTitle: 'Car A/C Repair Solutions',
       servicesList: [
@@ -49,12 +49,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Proactive A/C Maintenance',
         paragraphs: [
-          "At Quiroz Auto Heroes, we emphasize the significance of preventive maintenance. A well-maintained air conditioning system not only functions efficiently but also reduces the chances of unforeseen breakdowns.",
+          "At Quiroz Auto Repair, we emphasize the significance of preventive maintenance. A well-maintained air conditioning system not only functions efficiently but also reduces the chances of unforeseen breakdowns.",
           "By partnering with us for regular check-ups, you're investing in the longevity and consistent performance of your vehicle's cooling system.",
         ],
       },
       whyChoose: [
-        "Residents of Villa Park and DuPage County recognize the value of Quiroz Auto Heroes' services. Our dedication to transparency, combined with our emphasis on customer education, distinguishes us from the rest. Every interaction is an opportunity for us to showcase our expertise and our genuine care for your vehicle's well-being.",
+        "Residents of Cicero and Cook County recognize the value of Quiroz Auto Repair's services. Our dedication to transparency, combined with our emphasis on customer education, distinguishes us from the rest. Every interaction is an opportunity for us to showcase our expertise and our genuine care for your vehicle's well-being.",
         'With our team\'s ongoing training and the latest technological tools at our disposal, we guarantee top-notch service with every visit.',
       ],
     },
@@ -65,7 +65,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Brake Repair',
     tagline: 'Brakes squeaking?',
     description:
-      'Your safety depends on properly functioning brakes. Villa Park drivers trust us to provide comprehensive brake services that ensure your vehicle stops reliably every time. From routine pad replacements to complete brake system overhauls, we have you covered.',
+      'Your safety depends on properly functioning brakes. Cicero drivers trust us to provide comprehensive brake services that ensure your vehicle stops reliably every time. From routine pad replacements to complete brake system overhauls, we have you covered.',
     details: [
       'Brake pad and shoe replacement',
       'Rotor and drum resurfacing or replacement',
@@ -77,8 +77,8 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
     content: {
       intro: [
-        "Your vehicle's brakes are paramount to your safety on the road. Every time you press that pedal, you're entrusting your life to the efficiency of your brake system. At Quiroz Auto Heroes, we take this responsibility seriously. Located in Villa Park, IL, we're your go-to destination for top-notch brake repair and maintenance.",
-        "Brakes aren't just about the pedal and the squeal. At our Villa Park facility, we delve deep into the intricacies of the brake system. From brake pads and rotors to brake fluid and calipers, each component plays a pivotal role in ensuring a responsive stopping mechanism. Over time, wear and tear take a toll, and that's where our expertise shines, restoring your brake system to its prime.",
+        "Your vehicle's brakes are paramount to your safety on the road. Every time you press that pedal, you're entrusting your life to the efficiency of your brake system. At Quiroz Auto Repair, we take this responsibility seriously. Located in Cicero, IL, we're your go-to destination for top-notch brake repair and maintenance.",
+        "Brakes aren't just about the pedal and the squeal. At our Cicero facility, we delve deep into the intricacies of the brake system. From brake pads and rotors to brake fluid and calipers, each component plays a pivotal role in ensuring a responsive stopping mechanism. Over time, wear and tear take a toll, and that's where our expertise shines, restoring your brake system to its prime.",
       ],
       servicesTitle: 'Our Brake Service Offerings',
       servicesList: [
@@ -92,12 +92,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Preventive Brake Maintenance',
         paragraphs: [
-          "At our Villa Park center, we understand that brake issues can develop gradually. Regular maintenance helps catch problems early, before they become safety concerns. Our technicians perform thorough inspections to ensure every component of your braking system is in top condition.",
-          "By scheduling routine brake check-ups with Quiroz Auto Heroes, you're investing in your safety and avoiding costly emergency repairs down the road.",
+          "At our Cicero center, we understand that brake issues can develop gradually. Regular maintenance helps catch problems early, before they become safety concerns. Our technicians perform thorough inspections to ensure every component of your braking system is in top condition.",
+          "By scheduling routine brake check-ups with Quiroz Auto Repair, you're investing in your safety and avoiding costly emergency repairs down the road.",
         ],
       },
       whyChoose: [
-        "Choosing Quiroz Auto Heroes for your brake service needs means opting for excellence. Whether you're in Villa Park or the greater DuPage County area, you can trust our team's expertise, our state-of-the-art equipment, and our commitment to customer satisfaction.",
+        "Choosing Quiroz Auto Repair for your brake service needs means opting for excellence. Whether you're in Cicero or the greater Cook County area, you can trust our team's expertise, our state-of-the-art equipment, and our commitment to customer satisfaction.",
         "We stand behind every brake job we perform with our comprehensive warranty. Your safety is our top priority.",
       ],
     },
@@ -108,7 +108,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Engine Services',
     tagline: 'Engine trouble?',
     description:
-      'Your engine is the heart of your vehicle, and we treat it with the care it deserves. At our Villa Park shop, our experienced technicians use state-of-the-art diagnostic equipment to accurately identify issues, from minor tune-ups to major overhauls.',
+      'Your engine is the heart of your vehicle, and we treat it with the care it deserves. At our Cicero shop, our experienced technicians use state-of-the-art diagnostic equipment to accurately identify issues, from minor tune-ups to major overhauls.',
     details: [
       'Complete engine diagnostics and troubleshooting',
       'Check engine light diagnosis',
@@ -120,7 +120,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80',
     content: {
       intro: [
-        "Your engine is the heart of your vehicle, and at Quiroz Auto Heroes in Villa Park, we treat it with the utmost care and precision. Our experienced technicians leverage state-of-the-art diagnostic equipment to accurately identify engine issues, ensuring every problem is addressed at its source.",
+        "Your engine is the heart of your vehicle, and at Quiroz Auto Repair in Cicero, we treat it with the utmost care and precision. Our experienced technicians leverage state-of-the-art diagnostic equipment to accurately identify engine issues, ensuring every problem is addressed at its source.",
         "From minor tune-ups to major overhauls, our team has the expertise and equipment to handle it all. We understand that engine problems can be stressful, which is why we focus on transparent communication and efficient service to get you back on the road quickly.",
       ],
       servicesTitle: 'Comprehensive Engine Services',
@@ -135,12 +135,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Proactive Engine Maintenance',
         paragraphs: [
-          "Regular engine maintenance is the key to avoiding costly repairs and extending the life of your vehicle. At Quiroz Auto Heroes, we recommend routine check-ups that include oil changes, fluid inspections, and performance evaluations.",
+          "Regular engine maintenance is the key to avoiding costly repairs and extending the life of your vehicle. At Quiroz Auto Repair, we recommend routine check-ups that include oil changes, fluid inspections, and performance evaluations.",
           "Our preventive maintenance programs are designed to catch small issues before they become major problems, saving you time and money while keeping your engine running smoothly.",
         ],
       },
       whyChoose: [
-        "At Quiroz Auto Heroes, our engine service expertise is backed by years of experience and ongoing training. Villa Park and DuPage County drivers trust us because we combine technical excellence with honest, transparent service.",
+        "At Quiroz Auto Repair, our engine service expertise is backed by years of experience and ongoing training. Cicero and Cook County drivers trust us because we combine technical excellence with honest, transparent service.",
         "Every engine repair comes with our comprehensive warranty, giving you peace of mind that your vehicle is in the best hands.",
       ],
     },
@@ -163,7 +163,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&q=80',
     content: {
       intro: [
-        "A reliable battery and electrical system are essential for your vehicle's performance. At Quiroz Auto Heroes in Villa Park, we specialize in diagnosing and resolving all types of electrical issues, from a simple dead battery to complex wiring problems.",
+        "A reliable battery and electrical system are essential for your vehicle's performance. At Quiroz Auto Repair in Cicero, we specialize in diagnosing and resolving all types of electrical issues, from a simple dead battery to complex wiring problems.",
         "Modern vehicles are equipped with sophisticated electrical systems that power everything from your engine's ignition to your entertainment system. Our technicians stay current with the latest automotive electrical technology to provide accurate diagnostics and lasting repairs.",
       ],
       servicesTitle: 'Battery & Electrical Services',
@@ -178,12 +178,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Emergency Battery Assistance',
         paragraphs: [
-          "At Quiroz Auto Heroes, we understand that battery issues can strike unexpectedly. That's why we're always ready to assist, whether it's jump-starting your vehicle or providing a swift battery replacement. Our team is trained to handle emergencies efficiently, ensuring you're back on the road in no time.",
+          "At Quiroz Auto Repair, we understand that battery issues can strike unexpectedly. That's why we're always ready to assist, whether it's jump-starting your vehicle or providing a swift battery replacement. Our team is trained to handle emergencies efficiently, ensuring you're back on the road in no time.",
           "We recommend regular battery testing, especially before extreme weather seasons, to avoid unexpected breakdowns. Our quick diagnostic tests can tell you the health of your battery in minutes.",
         ],
       },
       whyChoose: [
-        "Choosing Quiroz Auto Heroes for your battery and electrical service needs means opting for excellence. Whether you're in Villa Park or anywhere in DuPage County, you can trust our team's expertise, our quality parts, and our commitment to getting you back on the road quickly.",
+        "Choosing Quiroz Auto Repair for your battery and electrical service needs means opting for excellence. Whether you're in Cicero or anywhere in Cook County, you can trust our team's expertise, our quality parts, and our commitment to getting you back on the road quickly.",
         "We stock a wide selection of batteries for all makes and models, ensuring same-day replacement in most cases.",
       ],
     },
@@ -206,7 +206,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80',
     content: {
       intro: [
-        "In the era of advanced automotive technology, computer diagnostics have become an essential part of vehicle maintenance and repair. At Quiroz Auto Heroes in Villa Park, we utilize state-of-the-art diagnostic equipment to interface with your vehicle's onboard computer systems, providing accurate and efficient troubleshooting.",
+        "In the era of advanced automotive technology, computer diagnostics have become an essential part of vehicle maintenance and repair. At Quiroz Auto Repair in Cicero, we utilize state-of-the-art diagnostic equipment to interface with your vehicle's onboard computer systems, providing accurate and efficient troubleshooting.",
         "Our technicians are trained to interpret complex diagnostic codes and translate them into actionable repair plans. Whether it's a persistent check engine light or an intermittent performance issue, our diagnostic capabilities allow us to identify the root cause quickly, saving you time and money.",
       ],
       servicesTitle: 'Diagnostic Service Offerings',
@@ -222,11 +222,11 @@ export const services: ServiceData[] = [
         title: 'Proactive Diagnostics',
         paragraphs: [
           "Don't wait for a warning light to appear. Regular diagnostic check-ups can reveal developing issues before they lead to breakdowns or costly repairs. Our comprehensive diagnostic scans cover all major vehicle systems.",
-          "At Quiroz Auto Heroes, we believe in empowering our customers with knowledge. After every diagnostic service, we provide a clear explanation of our findings and recommendations, so you can make informed decisions about your vehicle's care.",
+          "At Quiroz Auto Repair, we believe in empowering our customers with knowledge. After every diagnostic service, we provide a clear explanation of our findings and recommendations, so you can make informed decisions about your vehicle's care.",
         ],
       },
       whyChoose: [
-        "Our investment in the latest diagnostic technology means faster, more accurate diagnoses for your vehicle. Villa Park drivers choose Quiroz Auto Heroes because we combine cutting-edge tools with experienced technicians who know how to use them.",
+        "Our investment in the latest diagnostic technology means faster, more accurate diagnoses for your vehicle. Cicero drivers choose Quiroz Auto Repair because we combine cutting-edge tools with experienced technicians who know how to use them.",
         "We never charge for unnecessary repairs. Our diagnostics are thorough and honest, ensuring you only pay for what your vehicle truly needs.",
       ],
     },
@@ -249,7 +249,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80',
     content: {
       intro: [
-        "Regular oil changes are the single most important thing you can do to extend the life of your engine. At Quiroz Auto Heroes in Villa Park, we make oil changes quick, convenient, and thorough. Our service goes beyond just swapping oil — we perform a comprehensive multi-point inspection with every visit.",
+        "Regular oil changes are the single most important thing you can do to extend the life of your engine. At Quiroz Auto Repair in Cicero, we make oil changes quick, convenient, and thorough. Our service goes beyond just swapping oil — we perform a comprehensive multi-point inspection with every visit.",
         "We use only quality oils and filters that meet or exceed manufacturer specifications. Whether your vehicle requires conventional, synthetic blend, or full synthetic oil, we have the right product for your engine and driving conditions.",
       ],
       servicesTitle: 'Oil Change & Maintenance Services',
@@ -264,12 +264,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Scheduled Maintenance Programs',
         paragraphs: [
-          "Beyond oil changes, Quiroz Auto Heroes offers complete scheduled maintenance programs tailored to your vehicle's specific needs. We follow manufacturer-recommended service intervals to keep your warranty valid and your vehicle performing at its best.",
+          "Beyond oil changes, Quiroz Auto Repair offers complete scheduled maintenance programs tailored to your vehicle's specific needs. We follow manufacturer-recommended service intervals to keep your warranty valid and your vehicle performing at its best.",
           "Our maintenance reminders help you stay on track with your vehicle's service schedule. We keep detailed records of all services performed, giving you a complete maintenance history for your vehicle.",
         ],
       },
       whyChoose: [
-        "Villa Park drivers choose Quiroz Auto Heroes for oil changes because we deliver quality and convenience. Our efficient service gets you in and out quickly without cutting corners on thoroughness.",
+        "Cicero drivers choose Quiroz Auto Repair for oil changes because we deliver quality and convenience. Our efficient service gets you in and out quickly without cutting corners on thoroughness.",
         "Every oil change includes a complimentary multi-point inspection, so you'll always know the overall condition of your vehicle. No surprises, no pressure — just honest service.",
       ],
     },
@@ -280,7 +280,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Fleet Services',
     tagline: 'Managing a fleet?',
     description:
-      'Keep your business moving with our comprehensive fleet maintenance programs. Illinois businesses throughout Villa Park and the surrounding area trust us because we understand that downtime costs money, so we prioritize efficient service without compromising quality.',
+      'Keep your business moving with our comprehensive fleet maintenance programs. Illinois businesses throughout Cicero and the surrounding area trust us because we understand that downtime costs money, so we prioritize efficient service without compromising quality.',
     details: [
       'Scheduled preventive maintenance',
       'Priority scheduling for fleet vehicles',
@@ -292,7 +292,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80',
     content: {
       intro: [
-        "Managing a fleet of vehicles requires a reliable, efficient, and trustworthy automotive service partner. Quiroz Auto Heroes in Villa Park provides comprehensive fleet maintenance programs designed to minimize downtime and maximize the lifespan of your vehicles.",
+        "Managing a fleet of vehicles requires a reliable, efficient, and trustworthy automotive service partner. Quiroz Auto Repair in Cicero provides comprehensive fleet maintenance programs designed to minimize downtime and maximize the lifespan of your vehicles.",
         "We understand that every hour a vehicle is off the road costs your business money. That's why we offer priority scheduling, efficient turnaround times, and transparent reporting to keep your fleet running and your business moving forward.",
       ],
       servicesTitle: 'Fleet Management Solutions',
@@ -307,12 +307,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Fleet Partnership Benefits',
         paragraphs: [
-          "When you partner with Quiroz Auto Heroes for fleet services, you get more than just a repair shop — you get a dedicated automotive partner invested in your business success. Our volume pricing and flexible payment options make fleet maintenance budget-friendly.",
+          "When you partner with Quiroz Auto Repair for fleet services, you get more than just a repair shop — you get a dedicated automotive partner invested in your business success. Our volume pricing and flexible payment options make fleet maintenance budget-friendly.",
           "We provide detailed digital records for every vehicle in your fleet, making it easy to track maintenance history, upcoming services, and total cost of ownership.",
         ],
       },
       whyChoose: [
-        "Illinois businesses throughout Villa Park and DuPage County trust Quiroz Auto Heroes with their fleets because we deliver consistent, high-quality service with minimal disruption to operations. Our dedicated fleet team understands the unique demands of commercial vehicles.",
+        "Illinois businesses throughout Cicero and Cook County trust Quiroz Auto Repair with their fleets because we deliver consistent, high-quality service with minimal disruption to operations. Our dedicated fleet team understands the unique demands of commercial vehicles.",
         "From small business fleets to larger operations, we scale our services to meet your needs. Contact us to discuss a custom fleet maintenance program for your business.",
       ],
     },
@@ -323,7 +323,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Battery Replacement',
     tagline: 'Battery dying?',
     description:
-      "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Heroes, we specialize in ensuring that this critical component is in optimal condition for Villa Park drivers.",
+      "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Repair, we specialize in ensuring that this critical component is in optimal condition for Cicero drivers.",
     details: [
       'Battery health testing and diagnostics',
       'Battery replacement for all makes and models',
@@ -335,8 +335,8 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800&q=80',
     content: {
       intro: [
-        "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Heroes in Villa Park, IL, we specialize in ensuring that this critical component is in optimal condition. We're committed to keeping your car's heart beating strong.",
-        "A car battery might look simple, but it's the lifeblood of your vehicle. A failing battery can lead to a myriad of issues, from sluggish starts to complete breakdowns. At our Villa Park shop, we utilize advanced diagnostic tools to gauge the health of your battery, ensuring it has the strength to support all of your vehicle's operations.",
+        "Your vehicle's battery is its heartbeat, powering every function from the ignition to the headlights. At Quiroz Auto Repair in Cicero, IL, we specialize in ensuring that this critical component is in optimal condition. We're committed to keeping your car's heart beating strong.",
+        "A car battery might look simple, but it's the lifeblood of your vehicle. A failing battery can lead to a myriad of issues, from sluggish starts to complete breakdowns. At our Cicero shop, we utilize advanced diagnostic tools to gauge the health of your battery, ensuring it has the strength to support all of your vehicle's operations.",
       ],
       servicesTitle: 'Comprehensive Battery Services',
       servicesList: [
@@ -350,12 +350,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Emergency Battery Assistance',
         paragraphs: [
-          "At Quiroz Auto Heroes, we understand that battery issues can strike unexpectedly. That's why we're always on standby to assist, whether it's jump-starting your vehicle or providing a swift battery replacement. Our team is trained to handle emergencies efficiently, ensuring you're back on the road in no time.",
+          "At Quiroz Auto Repair, we understand that battery issues can strike unexpectedly. That's why we're always on standby to assist, whether it's jump-starting your vehicle or providing a swift battery replacement. Our team is trained to handle emergencies efficiently, ensuring you're back on the road in no time.",
           "We recommend regular battery testing, especially before extreme weather seasons in Illinois, to avoid unexpected breakdowns. Our quick diagnostic tests can tell you the health of your battery in minutes.",
         ],
       },
       whyChoose: [
-        "Choosing Quiroz Auto Heroes for your battery service needs means opting for excellence. Whether you're in Villa Park or anywhere in DuPage County, you can trust our team's expertise, our state-of-the-art equipment, and our commitment to customer satisfaction.",
+        "Choosing Quiroz Auto Repair for your battery service needs means opting for excellence. Whether you're in Cicero or anywhere in Cook County, you can trust our team's expertise, our state-of-the-art equipment, and our commitment to customer satisfaction.",
         "We stock batteries for all major makes and models, ensuring same-day replacement in most cases. Every battery we install comes with a warranty for your peace of mind.",
       ],
     },
@@ -366,7 +366,7 @@ export const services: ServiceData[] = [
     shortTitle: 'Repair Estimates',
     tagline: 'Need a quote?',
     description:
-      'Get transparent, accurate repair estimates before any work begins. At Quiroz Auto Heroes, we pride ourselves on honest pricing with no surprises — just straightforward assessments you can trust.',
+      'Get transparent, accurate repair estimates before any work begins. At Quiroz Auto Repair, we pride ourselves on honest pricing with no surprises — just straightforward assessments you can trust.',
     details: [
       'Free initial vehicle inspection',
       'Detailed written repair estimates',
@@ -378,7 +378,7 @@ export const services: ServiceData[] = [
     image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80',
     content: {
       intro: [
-        "At Quiroz Auto Heroes in Villa Park, IL, we understand that when your vehicle faces a problem, you want a straightforward and accurate estimate for repairs. We pride ourselves on our transparent and trustworthy service, providing Villa Park and DuPage County drivers with honest assessments they can rely on.",
+        "At Quiroz Auto Repair in Cicero, IL, we understand that when your vehicle faces a problem, you want a straightforward and accurate estimate for repairs. We pride ourselves on our transparent and trustworthy service, providing Cicero and Cook County drivers with honest assessments they can rely on.",
         "We have developed a comprehensive approach to auto repair estimates, ensuring clarity and precision. Our trained technicians evaluate your vehicle thoroughly using advanced diagnostic tools. This means that not only do we identify the obvious issues, but we also uncover underlying problems that could lead to future complications.",
       ],
       servicesTitle: 'Why Our Estimates Stand Out',
@@ -393,12 +393,12 @@ export const services: ServiceData[] = [
       maintenance: {
         title: 'Using Advanced Technology',
         paragraphs: [
-          "In Villa Park, our technicians leverage the power of cutting-edge diagnostic equipment. These tools allow us to quickly and accurately determine the root cause of any vehicular issue. It's not just about detecting a problem — it's about understanding its severity, potential implications, and the best methods of repair.",
+          "In Cicero, our technicians leverage the power of cutting-edge diagnostic equipment. These tools allow us to quickly and accurately determine the root cause of any vehicular issue. It's not just about detecting a problem — it's about understanding its severity, potential implications, and the best methods of repair.",
           "We believe that using the best tools on the market is crucial for providing our customers with the most accurate estimates. This investment in technology translates directly to savings for you through precise diagnostics and targeted repairs.",
         ],
       },
       whyChoose: [
-        "We recognize that every vehicle that comes into our shop represents a person or family who relies on their car for daily life. That's why we're committed to providing you with a stress-free experience. Whether you're in Villa Park or the surrounding DuPage County area, we promise to handle your vehicle with the utmost care.",
+        "We recognize that every vehicle that comes into our shop represents a person or family who relies on their car for daily life. That's why we're committed to providing you with a stress-free experience. Whether you're in Cicero or the surrounding Cook County area, we promise to handle your vehicle with the utmost care.",
         "Our no-obligation estimates mean you're never pressured into a repair. We lay out your options, explain the pros and cons, and let you make the decision that's right for your budget and your vehicle.",
       ],
     },

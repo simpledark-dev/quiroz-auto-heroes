@@ -6,51 +6,51 @@ import { useLocale } from '../providers/LocaleProvider';
 const testimonials = [
   {
     name: 'Sarah Johnson',
-    role: 'Villa Park Resident',
+    role: 'Cicero Resident',
     quote:
-      'Exceptional service in Villa Park IL! The team diagnosed my brake issue quickly and had me back on the road the same day. Highly recommend.',
+      'Exceptional service in Cicero IL! The team diagnosed my brake issue quickly and had me back on the road the same day. Highly recommend.',
     rating: 5,
   },
   {
     name: 'Michael Rodriguez',
-    role: 'Fleet Manager, Lombard',
+    role: 'Fleet Manager, Berwyn',
     quote:
       'Honest, reliable, and professional. They explained everything clearly and the pricing was fair. My go-to shop now.',
     rating: 5,
   },
   {
     name: 'Emily Chen',
-    role: 'Business Owner, Villa Park',
+    role: 'Business Owner, Cicero',
     quote:
-      'Best auto repair experience I have had in Villa Park IL. They took great care of my car and the customer service was outstanding.',
+      'Best auto repair experience I have had in Cicero IL. They took great care of my car and the customer service was outstanding.',
     rating: 5,
   },
   {
     name: 'David Thompson',
-    role: 'Elmhurst Resident',
+    role: 'Oak Park Resident',
     quote:
-      'Fast turnaround, quality work, and great communication. Quiroz Auto Heroes has earned my trust and loyalty.',
+      'Fast turnaround, quality work, and great communication. Quiroz Auto Repair has earned my trust and loyalty.',
     rating: 5,
   },
   {
     name: 'Lisa Martinez',
-    role: 'Addison Resident',
+    role: 'Chicago Resident',
     quote:
       'I appreciate their transparency and expertise. They never try to upsell unnecessary services. True professionals.',
     rating: 5,
   },
   {
     name: 'Robert Kim',
-    role: 'Villa Park Resident',
+    role: 'Cicero Resident',
     quote:
-      'Finally found a trustworthy mechanic in Villa Park IL! Alexia is honest, knowledgeable, and takes the time to explain everything. Will never go anywhere else.',
+      'Finally found a trustworthy mechanic in Cicero IL! Jose and the team are honest, knowledgeable, and take the time to explain everything. Will never go anywhere else.',
     rating: 5,
   },
   {
     name: 'Jennifer Walsh',
     role: 'Oak Park Resident',
     quote:
-      'Brought my car here after a bad experience at another shop. Quiroz Auto Heroes fixed the problem right the first time. Professional, affordable, and friendly service.',
+      'Brought my car here after a bad experience at another shop. Quiroz Auto Repair fixed the problem right the first time. Professional, affordable, and friendly service.',
     rating: 5,
   },
 ];
@@ -109,7 +109,7 @@ export default function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 md:py-24 bg-gradient-to-br from-[var(--qah-primary)] to-[#0c2244] bg-stars opacity-0 overflow-hidden"
+      className="relative py-16 md:py-24 bg-gradient-to-br from-[var(--qah-primary)] to-[#5a0f0f] bg-stars opacity-0 overflow-hidden"
     >
       {/* Decorative Elements */}
       <div className="absolute top-10 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />

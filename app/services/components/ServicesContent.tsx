@@ -60,7 +60,7 @@ export default function ServicesContent() {
                 </svg>
               </a>
               <a
-                href="tel:6302760478"
+                href="tel:7086524669"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

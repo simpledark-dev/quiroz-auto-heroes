@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import heroImage from '../assets/p6.jpg';
+import heroImage from '../assets/quiroz/shop-front.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function Hero() {
@@ -18,7 +18,7 @@ export default function Hero() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -32,146 +32,102 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] bg-stars opacity-0"
+      className="relative isolate overflow-hidden opacity-0 min-h-[88vh] flex items-end"
     >
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="space-y-4">
-              <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+      {/* Background photo */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src={heroImage}
+          alt={t('hero.imageAlt')}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Color + gradient overlays */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--qah-light)]/85 via-[var(--qah-primary)]/55 to-[var(--qah-light)]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[var(--qah-light)]/90 via-transparent to-[var(--qah-primary)]/40" />
+
+      {/* Decorative accent blobs */}
+      <div className="pointer-events-none absolute -top-20 -left-20 w-96 h-96 bg-[var(--qah-accent)]/25 rounded-full blur-[120px] -z-10" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 w-[500px] h-[500px] bg-[var(--qah-accent-hover)]/15 rounded-full blur-[140px] -z-10" />
+
+      {/* Diagonal stripe accent (top-right) */}
+      <div className="pointer-events-none absolute top-0 right-0 w-1/3 h-32 bg-gradient-to-l from-[var(--qah-accent)]/80 to-transparent skew-y-[-6deg] origin-top-right -z-10 hidden md:block" />
+
+      {/* Content */}
+      <div className="relative w-full pt-36 pb-12 md:pt-44 md:pb-20">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+          <div className="max-w-3xl space-y-7">
+            {/* Eyebrow chip */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--qah-accent)]/15 border border-[var(--qah-accent)]/40 rounded-full backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[var(--qah-accent-hover)] opacity-75 animate-ping" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--qah-accent)]" />
+              </span>
+              <span className="text-[var(--qah-dark)] text-xs font-semibold uppercase tracking-[0.18em]">
+                6027 W 26th St · Cicero, IL
+              </span>
+            </div>
+
+            {/* Title with accent underline */}
+            <div className="space-y-5">
+              <h1 className="text-[40px] md:text-[58px] lg:text-[68px] font-black text-white leading-[1.05] tracking-tight">
                 {t('hero.title')}
               </h1>
-              <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
+              <div className="h-1.5 w-24 bg-[var(--qah-accent)] rounded-full" />
+              <p className="text-lg md:text-xl text-[var(--qah-dark)]/85 leading-relaxed max-w-2xl">
                 {t('hero.body')}
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:7086524669"
+                className="group inline-flex items-center justify-center gap-3 bg-[var(--qah-accent)] text-white pl-6 pr-3 h-14 rounded-md hover:bg-[var(--qah-accent-hover)] transition-all duration-200 shadow-lg shadow-[var(--qah-accent)]/30"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span className="font-semibold">{t('hero.ctaCall')}</span>
+                <span className="ml-2 inline-flex items-center justify-center h-10 px-3 rounded-sm bg-black/25 text-sm font-bold tracking-wider">
+                  (708) 652-4669
+                </span>
+              </a>
               <a
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-6 h-14 rounded-md hover:bg-white/10 transition-colors duration-200"
               >
                 {t('hero.ctaServices')}
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
-              <a
-                href="tel:6302760478"
-                className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
-              >
-                {t('hero.ctaCall')}
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Trust Row */}
-            <div className="flex flex-wrap gap-6 pt-4 justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <svg
-                  className="w-5 h-5 text-[var(--qah-accent)]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  {t('hero.badges.ase')}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg
-                  className="w-5 h-5 text-[var(--qah-accent)]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  {t('hero.badges.rating')}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg
-                  className="w-5 h-5 text-[var(--qah-accent)]"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm font-medium text-[var(--qah-dark)]">
-                  {t('hero.badges.fast')}
-                </span>
-              </div>
             </div>
           </div>
+        </div>
 
-          {/* Right Image */}
-          <div className="relative p-3">
-            {/* Decorative accent shapes */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--qah-accent)]/20 rounded-full blur-2xl" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[var(--qah-primary)]/30 rounded-full blur-2xl" />
-
-            {/* Accent border frame */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--qah-accent)]/30 via-transparent to-[var(--qah-primary)]/30 rounded-2xl" />
-
-            {/* Main image container */}
-            <div className="relative aspect-[4/3] rounded-2xl shadow-2xl overflow-hidden ring-1 ring-white/10">
-              <Image
-                src={heroImage}
-                alt={t('hero.imageAlt')}
-                fill
-                className="object-cover"
-                priority
-              />
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[var(--qah-primary)]/20 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating badge */}
-            <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 bg-[var(--qah-accent)] text-white px-5 py-3 rounded-xl shadow-lg">
-              <div className="text-2xl md:text-3xl font-bold">10+</div>
-              <div className="text-xs md:text-sm opacity-90">{t('hero.yearsExperience')}</div>
-            </div>
-
-            {/* Corner accent */}
-            <div className="absolute top-2 right-2 w-6 h-6 bg-[var(--qah-accent)] rounded-full shadow-lg flex items-center justify-center">
-              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </div>
+        {/* Bottom stat strip */}
+        <div className="mt-12 md:mt-20 border-y border-white/10 bg-black/40 backdrop-blur-sm">
+          <div className="max-w-[1200px] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {[
+              { label: '20+', sub: t('hero.yearsExperience') },
+              { label: 'ASE', sub: t('hero.badges.ase') },
+              { label: '★ 5.0', sub: t('hero.badges.rating') },
+              { label: '24h', sub: t('hero.badges.fast') },
+            ].map((stat) => (
+              <div key={stat.sub} className="py-5 md:py-6 px-3 md:px-6 flex items-center gap-3 md:gap-4">
+                <div className="text-2xl md:text-3xl font-black text-[var(--qah-accent-hover)] tabular-nums">
+                  {stat.label}
+                </div>
+                <div className="text-[11px] md:text-xs uppercase tracking-[0.12em] text-[var(--qah-dark)]/85 leading-tight">
+                  {stat.sub}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

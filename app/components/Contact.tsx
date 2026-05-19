@@ -51,9 +51,9 @@ export default function Contact() {
         </svg>
       ),
       label: t('contact.cards.visit'),
-      value: '201 W North Ave, Unit 201',
-      value2: 'Villa Park, IL 60181',
-      link: 'https://maps.google.com/?q=201+W+North+Ave,+Villa+Park,+IL+60181',
+      value: '6027 W 26th St',
+      value2: 'Cicero, IL 60804',
+      link: 'https://www.google.com/maps/place/Quiroz+Auto+Repair+No.+2/data=!4m2!3m1!1s0x0:0x5f71255b193ea3df?sa=X&ved=1t:2428&ictx=111',
     },
     {
       icon: (
@@ -72,8 +72,8 @@ export default function Contact() {
         </svg>
       ),
       label: t('contact.cards.call'),
-      value: '(630) 276-0478',
-      link: 'tel:6302760478',
+      value: '(708) 652-4669',
+      link: 'tel:7086524669',
     },
     {
       icon: (
@@ -92,8 +92,8 @@ export default function Contact() {
         </svg>
       ),
       label: t('contact.cards.email'),
-      value: 'quirozautoheroes@gmail.com',
-      link: 'mailto:quirozautoheroes@gmail.com',
+      value: 'info@quirozautorepairs.com',
+      link: 'mailto:info@quirozautorepairs.com',
     },
   ];
 
@@ -204,14 +204,14 @@ export default function Contact() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.9999999999995!2d-87.9799999!3d41.8899999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e4e9999999999%3A0x9999999999999999!2s201%20W%20North%20Ave%2C%20Villa%20Park%2C%20IL%2060181!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                src="https://www.google.com/maps?q=Quiroz+Auto+Repair+No.+2,+6027+W+26th+St,+Cicero,+IL+60804&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '100%' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Quiroz Auto Heroes Location"
+                title="Quiroz Auto Repair Location"
                 className="absolute inset-0"
               ></iframe>
             </div>
@@ -233,7 +233,7 @@ export default function Contact() {
               </div>
             </div>
             <a
-              href="tel:6302760478"
+              href="tel:7086524669"
               className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 font-medium whitespace-nowrap"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
