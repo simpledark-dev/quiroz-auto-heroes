@@ -24,10 +24,10 @@ export default function VehiclesContent() {
                             <span className="text-[var(--qah-accent)]">{t('vehiclesPage.hero.breadcrumb.vehicles')}</span>
                         </nav>
 
-                        <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
+                        <span className="qa-chip">
                             {t('vehiclesPage.hero.badge')}
                         </span>
-                        <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+                        <h1 className="qa-heading qa-heading-center text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
                             {t('vehiclesPage.hero.title')}
                         </h1>
                         <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
@@ -82,7 +82,7 @@ export default function VehiclesContent() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                                 <a
                                     href="tel:7086524669"
-                                    className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
+                                    className="qa-btn qa-btn-primary"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -96,7 +96,7 @@ export default function VehiclesContent() {
                                 </a>
                                 <a
                                     href="#contact"
-                                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 h-12 rounded-full hover:bg-white hover:text-[var(--qah-primary)] transition-all duration-200 font-medium"
+                                    className="qa-btn qa-btn-outline-dark"
                                 >
                                     {t('vehiclesPage.cta.contact')}
                                 </a>

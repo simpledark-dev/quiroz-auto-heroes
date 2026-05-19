@@ -39,10 +39,10 @@ export default function Mechanic() {
           {/* Left - Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
+              <span className="qa-chip-light">
                 {t('mechanic.eyebrow')}
               </span>
-              <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
+              <h2 className="qa-heading text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
                 {t('mechanic.title')}
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
@@ -68,7 +68,7 @@ export default function Mechanic() {
             <div>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
+                className="qa-btn qa-btn-primary"
               >
                 {t('mechanic.cta')}
                 <svg

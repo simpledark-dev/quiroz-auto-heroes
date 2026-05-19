@@ -25,10 +25,10 @@ export default function AboutContent() {
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6 text-center lg:text-left">
-                            <span className="inline-flex items-center justify-center gap-2 px-4 py-1.5 bg-[var(--qah-accent)] text-white rounded-full text-sm font-semibold">
+                            <span className="qa-chip">
                                 {dict.aboutPage.hero.badge}
                             </span>
-                            <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+                            <h1 className="qa-heading qa-heading-center text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
                                 {dict.aboutPage.hero.title}
                             </h1>
                             <p className="text-lg text-[var(--qah-dark)]/80 leading-relaxed">
@@ -37,7 +37,7 @@ export default function AboutContent() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <a
                                     href="/services"
-                                    className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors"
+                                    className="qa-btn qa-btn-primary"
                                 >
                                     {dict.aboutPage.hero.ctaServices}
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function AboutContent() {
                                 </a>
                                 <a
                                     href="#story"
-                                    className="inline-flex items-center justify-center gap-2 border border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-colors"
+                                    className="qa-btn qa-btn-outline-light"
                                 >
                                     {dict.aboutPage.hero.ctaStory}
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,10 +74,10 @@ export default function AboutContent() {
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
+                            <span className="qa-chip-light">
                                 {dict.aboutPage.story.badge}
                             </span>
-                            <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
+                            <h2 className="qa-heading text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
                                 {dict.aboutPage.story.title}
                             </h2>
                             <p className="text-[var(--qah-text-body)] text-lg leading-relaxed">
@@ -114,10 +114,10 @@ export default function AboutContent() {
             <section className="py-16 md:py-24 bg-[var(--qah-light)] bg-stars">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="text-center mb-12 space-y-4">
-                        <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
+                        <span className="qa-chip">
                             {dict.aboutPage.stats.badge}
                         </span>
-                        <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">{dict.aboutPage.stats.title}</h2>
+                        <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">{dict.aboutPage.stats.title}</h2>
                         <p className="text-[var(--qah-dark)]/80 text-lg max-w-2xl mx-auto">
                             {dict.aboutPage.stats.description}
                         </p>
@@ -141,10 +141,10 @@ export default function AboutContent() {
             <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="text-center mb-12 space-y-4">
-                        <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
+                        <span className="qa-chip-light">
                             {dict.aboutPage.values.badge}
                         </span>
-                        <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">{dict.aboutPage.values.title}</h2>
+                        <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">{dict.aboutPage.values.title}</h2>
                         <p className="text-[var(--qah-text-body)] text-lg max-w-2xl mx-auto">
                             {dict.aboutPage.values.description}
                         </p>
@@ -165,10 +165,10 @@ export default function AboutContent() {
             <section className="py-16 md:py-24 bg-[var(--qah-section-light)]">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="text-center mb-12 space-y-4">
-                        <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
+                        <span className="qa-chip-light">
                             {dict.aboutPage.timeline.badge}
                         </span>
-                        <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">{dict.aboutPage.timeline.title}</h2>
+                        <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)]">{dict.aboutPage.timeline.title}</h2>
                         <p className="text-[var(--qah-text-body)] text-lg max-w-3xl mx-auto">
                             {dict.aboutPage.timeline.description}
                         </p>

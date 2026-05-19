@@ -40,7 +40,7 @@ export default function Promotion() {
               {t('promotion.eyebrow')}
             </span>
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
+          <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
             {t('promotion.title')}
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
@@ -55,7 +55,7 @@ export default function Promotion() {
         <div className="text-center mt-8 space-y-3">
           {/* Limited Time Text */}
           <div className="flex items-center justify-center gap-2 text-[var(--qah-dark)]/90">
-            <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-[var(--qah-accent-hover)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span className="text-sm font-medium">
@@ -66,7 +66,7 @@ export default function Promotion() {
           {/* CTA Button */}
           <a
             href="tel:7086524669"
-            className="inline-flex items-center gap-2 bg-amber-500 text-white px-8 py-4 rounded-full hover:bg-amber-600 transition-colors duration-200 font-medium text-lg"
+            className="qa-btn qa-btn-primary"
           >
             <svg
               className="w-5 h-5"

@@ -22,10 +22,10 @@ export default function ContactPageContent() {
             <span className="text-[var(--qah-accent)]">{ui.breadcrumb.contact}</span>
           </nav>
 
-          <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
+          <span className="qa-chip">
             {ui.badge}
           </span>
-          <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+          <h1 className="qa-heading qa-heading-center text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
             {ui.title}
           </h1>
           <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">

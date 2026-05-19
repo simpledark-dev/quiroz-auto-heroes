@@ -72,7 +72,7 @@ export default function PromotionsContent() {
                 {t('promotion.eyebrow')}
               </span>
             </span>
-            <h1 className="text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+            <h1 className="qa-heading qa-heading-center text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
               {t('promotionsPage.heroTitle')}
             </h1>
             <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
@@ -102,7 +102,7 @@ export default function PromotionsContent() {
             className="text-center mb-12 space-y-4"
             style={SLIDE_INITIAL.left}
           >
-            <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
+            <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
               {t('promotion.title')}
             </h2>
             <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">

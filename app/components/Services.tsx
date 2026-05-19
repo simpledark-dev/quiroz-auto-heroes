@@ -47,10 +47,10 @@ export default function Services() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
+          <span className="qa-chip">
             {t('servicesSection.eyebrow')}
           </span>
-          <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
+          <h2 className="qa-heading qa-heading-center text-[32px] md:text-[42px] font-bold text-[var(--qah-white)]">
             {t('servicesSection.title')}
           </h2>
           <p className="text-lg text-[var(--qah-dark)]/80 max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ export default function Services() {
         <div className="text-center mt-12">
           <a
             href="/services"
-            className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 py-4 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium text-lg"
+            className="qa-btn qa-btn-primary"
           >
             {t('servicesSection.cta')}
             <svg
