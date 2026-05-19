@@ -40,10 +40,10 @@ export default function ServicesContent() {
       <section ref={heroRef} className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[var(--qah-light)] bg-stars opacity-0">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <span className="qa-chip">
+            <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
               {t('servicesSection.eyebrow')}
             </span>
-            <h1 className="qa-heading qa-heading-center text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+            <h1 className="text-[40px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
               {t('servicesSection.title')}
             </h1>
             <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
@@ -52,7 +52,7 @@ export default function ServicesContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a
                 href="#contact"
-                className="qa-btn qa-btn-primary"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
               >
                 {t('servicesSection.cardCta')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ export default function ServicesContent() {
               </a>
               <a
                 href="tel:7086524669"
-                className="qa-btn qa-btn-outline-light"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -103,7 +103,7 @@ export default function ServicesContent() {
                 <div className="pt-6">
                   <a
                     href="#contact"
-                    className="qa-btn qa-btn-primary"
+                    className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-8 py-4 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium text-lg"
                   >
                     {t('servicesPage.moreServices.cta')}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
 
       <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
         <div className="space-y-4">
-          <span className="qa-chip-light">
+          <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
             {service.tagline}
           </span>
           <h2 className="text-[28px] md:text-[36px] font-bold text-[var(--qah-text-heading)] leading-tight">
@@ -174,7 +174,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         </ul>
         <a
           href="#contact"
-          className="qa-btn qa-btn-primary"
+          className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
         >
           {t('servicesPage.serviceCard.cta')}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -134,7 +134,7 @@ export default function Testimonials() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
-          <span className="qa-chip">
+          <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
             {t('testimonials.eyebrow')}
           </span>
           <h2 className="text-[32px] md:text-[42px] font-bold text-white">

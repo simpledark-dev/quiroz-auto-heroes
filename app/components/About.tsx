@@ -70,10 +70,10 @@ export default function About() {
           {/* Right - Content */}
           <div className="space-y-8">
             <div className="space-y-4 text-center lg:text-left">
-              <span className="qa-chip-light">
+              <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)]/10 text-[var(--qah-accent)] text-sm font-semibold rounded-full">
                 {t('about.eyebrow')}
               </span>
-              <h2 className="qa-heading text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
+              <h2 className="text-[32px] md:text-[42px] font-bold text-[var(--qah-text-heading)] leading-tight">
                 {t('about.title')}
               </h2>
               <p className="text-base md:text-lg text-[var(--qah-text-body)] leading-relaxed">
@@ -107,7 +107,7 @@ export default function About() {
             <div className="text-center lg:text-left">
               <a
                 href="/about"
-                className="qa-btn qa-btn-outline-light"
+                className="inline-flex items-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
                 {t('about.cta')}
                 <svg

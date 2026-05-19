@@ -46,10 +46,10 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                             <span className="text-[var(--qah-accent)]">{vehicle.name}</span>
                         </nav>
 
-                        <span className="qa-chip">
+                        <span className="inline-block px-4 py-1.5 bg-[var(--qah-accent)] text-white text-sm font-semibold rounded-full">
                             {ui.badge}
                         </span>
-                        <h1 className="qa-heading qa-heading-center text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
+                        <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[var(--qah-white)] leading-tight">
                             {vehicle.name} {ui.titleSuffix}
                         </h1>
                         <p className="text-lg md:text-xl text-[var(--qah-dark)]/80 leading-relaxed">
@@ -58,7 +58,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                             <a
                                 href="#contact"
-                                className="qa-btn qa-btn-primary"
+                                className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200"
                             >
                                 {ui.cta.schedule}
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                             </a>
                             <a
                                 href="tel:7086524669"
-                                className="qa-btn qa-btn-outline-light"
+                                className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
@@ -152,7 +152,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                                 </p>
                                 <a
                                     href="tel:7086524669"
-                                    className="qa-btn qa-btn-primary mt-4"
+                                    className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium mt-4"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -200,7 +200,7 @@ export default function VehicleDetailContent({ vehicle }: VehicleDetailContentPr
                     <div className="text-center mt-8">
                         <Link
                             href="/vehicles"
-                            className="qa-btn qa-btn-outline-light"
+                            className="inline-flex items-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200 font-medium"
                         >
                             {ui.viewAll}
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

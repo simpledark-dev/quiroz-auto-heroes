@@ -223,7 +223,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="tel:7086524669"
-              className="hidden md:inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 h-11 rounded-md hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 group"
+              className="hidden md:inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 h-11 rounded-full hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 group"
             >
               <svg
                 className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
@@ -387,7 +387,7 @@ export default function Navbar() {
           <a
             href="tel:7086524669"
             onClick={handleLinkClick}
-            className="flex items-center justify-center gap-2 mt-4 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-md hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
+            className="flex items-center justify-center gap-2 mt-4 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
