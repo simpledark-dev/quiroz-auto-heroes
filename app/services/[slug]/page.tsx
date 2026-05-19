@@ -30,10 +30,10 @@ export async function generateMetadata({
   const ogUrl = absoluteUrl(service.image);
 
   return {
-    title: `${service.title} | Quiroz Auto Repair`,
+    title: `${service.title} | Quiroz Auto Heroes`,
     description: service.description,
     openGraph: {
-      title: `${service.title} | Quiroz Auto Repair`,
+      title: `${service.title} | Quiroz Auto Heroes`,
       description: service.description,
       url,
       images: [
@@ -47,7 +47,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${service.title} | Quiroz Auto Repair`,
+      title: `${service.title} | Quiroz Auto Heroes`,
       description: service.description,
       images: [ogUrl],
     },

@@ -9,9 +9,9 @@ import AboutContent from './AboutContent';
 
 
 export const metadata: Metadata = {
-  title: 'About Quiroz Auto Repair | Cicero Auto Repair & Car Repair Mechanic',
+  title: 'About Quiroz Auto Heroes | Villa Park Auto Repair & Car Repair Mechanic',
   description:
-    "Learn how Quiroz Auto Repair became Cicero's trusted auto repair and car repair shop. Meet our experienced mechanic, mission, values, and story rooted in craftsmanship and transparency.",
+    "Learn how Quiroz Auto Heroes became Villa Park's trusted auto repair and car repair shop. Meet our experienced mechanic, mission, values, and story rooted in craftsmanship and transparency.",
   alternates: {
     canonical: '/about',
   },

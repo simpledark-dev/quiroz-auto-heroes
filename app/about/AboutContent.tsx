@@ -5,9 +5,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
-import heroImage from '../assets/quiroz/shop-front.jpeg';
-import workshopImage from '../assets/quiroz/team.jpeg';
-import detailImage from '../assets/quiroz/engine-work.jpeg';
+import heroImage from '../assets/p4.jpg';
+import workshopImage from '../assets/p2.jpg';
+import detailImage from '../assets/p5.jpg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function AboutContent() {
@@ -100,7 +100,7 @@ export default function AboutContent() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
-                                <Image src={workshopImage} alt="Quiroz Auto Repair bay" fill className="object-cover" />
+                                <Image src={workshopImage} alt="Quiroz Auto Heroes bay" fill className="object-cover" />
                             </div>
                             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg translate-y-6">
                                 <Image src={detailImage} alt="Vehicle diagnostics" fill className="object-cover" />

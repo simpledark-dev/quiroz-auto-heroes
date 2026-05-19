@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import SpecialsCarousel from './SpecialsCarousel';
+import Image from 'next/image';
+import flyerImage from '../assets/flyer.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function Promotion() {
@@ -48,8 +49,22 @@ export default function Promotion() {
           </p>
         </div>
 
-        {/* Specials Carousel */}
-        <SpecialsCarousel />
+        {/* Flyer */}
+        <div className="relative mx-auto animate-bounce-float">
+          {/* Outer glow */}
+          <div className="absolute -inset-2 bg-gradient-to-r from-[var(--qah-accent)] via-amber-400 to-[var(--qah-accent)] rounded-2xl blur-md opacity-40" />
+
+          {/* Gradient border */}
+          <div className="relative rounded-2xl p-[3px] bg-gradient-to-br from-amber-400 via-[var(--qah-accent)] to-amber-400">
+            <div className="rounded-[13px] overflow-hidden">
+              <Image
+                src={flyerImage}
+                alt="Quiroz Auto Heroes Promotion - $29 Oil Change, $299 Brakes, Free Check Engine Light Scan"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
 
         {/* CTA Section */}
         <div className="text-center mt-8 space-y-3">
@@ -65,7 +80,7 @@ export default function Promotion() {
 
           {/* CTA Button */}
           <a
-            href="tel:7086524669"
+            href="tel:6302760478"
             className="inline-flex items-center gap-2 bg-amber-500 text-white px-8 py-4 rounded-full hover:bg-amber-600 transition-colors duration-200 font-medium text-lg"
           >
             <svg

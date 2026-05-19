@@ -12,9 +12,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Auto Repair Shop in Cicero, IL | Quiroz Auto Repair',
+  title: 'Auto Repair Shop in Villa Park, IL | Quiroz Auto Heroes',
   description:
-    'Quiroz Auto Repair delivers expert auto repair, car repair, brake service, maintenance, and fleet services for drivers throughout Cicero and Cook County.',
+    'Quiroz Auto Heroes delivers expert auto repair, car repair, brake service, maintenance, and fleet services for drivers throughout Villa Park and DuPage County.',
   alternates: {
     canonical: '/',
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function QuirozAutoRepair() {
+export default function QuirozAutoHeroes() {
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />

@@ -2,9 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import aboutImage1 from '../assets/quiroz/tire-balance.jpeg';
-import aboutImage2 from '../assets/quiroz/engine-work.jpeg';
-import aboutImage3 from '../assets/quiroz/storefront.jpeg';
+import aboutImage1 from '../assets/p1.jpg';
+import aboutImage2 from '../assets/p2.jpg';
+import aboutImage3 from '../assets/p3.jpg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function About() {
@@ -60,7 +60,7 @@ export default function About() {
             <div className="relative col-span-2 aspect-[2/1] rounded-xl shadow-md overflow-hidden">
               <Image
                 src={aboutImage3}
-                alt="Quiroz Auto Repair facility"
+                alt="Quiroz Auto Heroes facility"
                 fill
                 className="object-cover"
               />

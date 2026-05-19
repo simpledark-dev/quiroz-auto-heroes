@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Quiroz Auto Repair - Premium Auto Repair in Cicero, IL';
+export const alt = 'Quiroz Auto Heroes - Premium Auto Repair in Villa Park, IL';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -16,7 +16,7 @@ export default function OGImage() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'linear-gradient(135deg, #5a1230 0%, #1a0810 60%, #2d0e1c 100%)',
+          background: 'linear-gradient(135deg, #002865 0%, #0a1628 60%, #001a40 100%)',
           position: 'relative',
           overflow: 'hidden',
         }}
@@ -30,7 +30,7 @@ export default function OGImage() {
             width: 400,
             height: 400,
             borderRadius: '50%',
-            background: 'rgba(168, 58, 91, 0.28)',
+            background: 'rgba(4, 96, 221, 0.15)',
           }}
         />
         <div
@@ -41,7 +41,7 @@ export default function OGImage() {
             width: 300,
             height: 300,
             borderRadius: '50%',
-            background: 'rgba(168, 58, 91, 0.22)',
+            background: 'rgba(4, 96, 221, 0.1)',
           }}
         />
 
@@ -62,8 +62,8 @@ export default function OGImage() {
               display: 'flex',
               alignItems: 'center',
               gap: 12,
-              background: 'rgba(168, 58, 91, 0.28)',
-              border: '1px solid rgba(168, 58, 91, 0.5)',
+              background: 'rgba(4, 96, 221, 0.2)',
+              border: '1px solid rgba(4, 96, 221, 0.4)',
               borderRadius: 40,
               padding: '8px 24px',
             }}
@@ -73,11 +73,11 @@ export default function OGImage() {
                 width: 10,
                 height: 10,
                 borderRadius: '50%',
-                background: '#a83a5b',
+                background: '#0460DD',
               }}
             />
-            <span style={{ color: '#f4c2d4', fontSize: 18, fontWeight: 600 }}>
-              Cicero, IL
+            <span style={{ color: '#7db4f0', fontSize: 18, fontWeight: 600 }}>
+              Villa Park, IL
             </span>
           </div>
 
@@ -92,7 +92,7 @@ export default function OGImage() {
               margin: 0,
             }}
           >
-            Quiroz Auto Repair
+            Quiroz Auto Heroes
           </h1>
 
           {/* Tagline */}
@@ -114,7 +114,7 @@ export default function OGImage() {
             style={{
               width: 80,
               height: 3,
-              background: '#a83a5b',
+              background: '#0460DD',
               borderRadius: 2,
             }}
           />
@@ -129,13 +129,13 @@ export default function OGImage() {
             }}
           >
             <span style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 18 }}>
-              (708) 652-4669
+              (630) 276-0478
             </span>
             <span style={{ color: 'rgba(255, 255, 255, 0.3)', fontSize: 18 }}>
               |
             </span>
             <span style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 18 }}>
-              6027 W 26th St, Cicero, IL
+              201 W North Ave, Villa Park, IL
             </span>
           </div>
         </div>

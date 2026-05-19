@@ -74,7 +74,7 @@ export default function ServiceDetailContent({ service }: ServiceDetailContentPr
                 </svg>
               </a>
               <a
-                href="tel:7086524669"
+                href="tel:6302760478"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[var(--qah-accent)] text-[var(--qah-accent)] px-8 h-12 rounded-full hover:bg-[var(--qah-accent)] hover:text-white transition-all duration-200"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function ServiceDetailContent({ service }: ServiceDetailContentPr
                     <div className="relative aspect-[4/3] rounded-2xl shadow-xl overflow-hidden ring-1 ring-black/5">
                       <Image
                         src={service.image}
-                        alt={`${serviceContent.title} service in Cicero, IL`}
+                        alt={`${serviceContent.title} service in Villa Park, IL`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -194,7 +194,7 @@ export default function ServiceDetailContent({ service }: ServiceDetailContentPr
                   </p>
                 ))}
                 <a
-                  href="tel:7086524669"
+                  href="tel:6302760478"
                   className="inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium mt-4"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

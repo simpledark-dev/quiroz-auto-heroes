@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import VehiclesContent from './components/VehiclesContent';
 
 export const metadata: Metadata = {
-  title: 'Vehicles We Service - Quiroz Auto Repair | Cicero, IL',
+  title: 'Vehicles We Service - Quiroz Auto Heroes | Villa Park, IL',
   description:
-    'Quiroz Auto Repair in Cicero, IL services all makes and models. From Acura to Volvo, our experienced technicians provide expert maintenance and repair for your vehicle.',
+    'Quiroz Auto Heroes in Villa Park, IL services all makes and models. From Acura to Volvo, our experienced technicians provide expert maintenance and repair for your vehicle.',
   alternates: {
     canonical: '/vehicles',
   },

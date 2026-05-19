@@ -12,7 +12,7 @@ export default function NotFound() {
         </h1>
         <p className="text-[var(--qah-dark)] text-lg leading-relaxed">
           We couldn’t find the URL you requested. Use the links below to get back on the right route
-          or head home to explore Quiroz Auto Repair.
+          or head home to explore Quiroz Auto Heroes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <Link
@@ -33,8 +33,8 @@ export default function NotFound() {
         </div>
         <div className="pt-8 text-sm text-white/60">
           Need immediate help? Call{' '}
-          <a href="tel:7086524669" className="text-[var(--qah-accent)] hover:underline">
-            (708) 652-4669
+          <a href="tel:6302760478" className="text-[var(--qah-accent)] hover:underline">
+            (630) 276-0478
           </a>
           .
         </div>

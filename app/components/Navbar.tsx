@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../assets/quiroz-auto-heroes-logo-1.png';
 import { services } from '../data/services';
 import { vehicles } from '../data/vehicles';
 import { useLocale } from '../providers/LocaleProvider';
@@ -80,16 +82,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group"
-            aria-label="Quiroz Auto Repair"
+            className="flex items-center group"
           >
-            <span className="flex items-center justify-center w-11 h-11 rounded-md bg-[var(--qah-accent)] border border-white/20 shadow-md transition-transform duration-300 group-hover:scale-105">
-              <span className="font-black text-white text-xl tracking-tight">Q</span>
-            </span>
-            <span className="hidden sm:flex flex-col leading-tight">
-              <span className="text-white font-bold text-base tracking-wide">QUIROZ</span>
-              <span className="text-[var(--qah-dark)] text-[11px] uppercase tracking-[0.18em]">Auto Repair</span>
-            </span>
+            <Image
+              src={logo}
+              alt="Quiroz Auto Heroes"
+              height={56}
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -222,7 +223,7 @@ export default function Navbar() {
           {/* Right side: CTA + Mobile Menu */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:7086524669"
+              href="tel:6302760478"
               className="hidden md:inline-flex items-center gap-2 bg-[var(--qah-accent)] text-white px-6 h-11 rounded-full hover:bg-[var(--qah-accent-hover)] hover:shadow-lg hover:shadow-[var(--qah-accent)]/25 transition-all duration-300 group"
             >
               <svg
@@ -385,7 +386,7 @@ export default function Navbar() {
 
 
           <a
-            href="tel:7086524669"
+            href="tel:6302760478"
             onClick={handleLinkClick}
             className="flex items-center justify-center gap-2 mt-4 bg-[var(--qah-accent)] text-white px-6 py-3 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
           >

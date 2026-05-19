@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 import ContactPageContent from './components/ContactPageContent';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Auto Repair & Car Repair Mechanic | Cicero, IL',
+  title: 'Contact Us - Auto Repair & Car Repair Mechanic | Villa Park, IL',
   description:
-    'Contact Quiroz Auto Repair for auto repair and car repair services in Cicero, IL. Call (708) 652-4669, email us, or visit our mechanic shop at 6027 W 26th St. Serving Cicero, Berwyn, Oak Park, and Cook County.',
+    'Contact Quiroz Auto Heroes for auto repair and car repair services in Villa Park, IL. Call (630) 276-0478, email us, or visit our mechanic shop at 201 W North Ave. Serving Villa Park, Lombard, Elmhurst, and DuPage County.',
   alternates: {
     canonical: '/contact',
   },

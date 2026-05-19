@@ -45,21 +45,21 @@ export async function generateMetadata({
   }
 
   const canonicalUrl = absoluteUrl(`/vehicles/${slug}`);
-  const description = `Expert ${vehicle.name} service and repair in Cicero, IL. Quiroz Auto Repair provides quality maintenance, diagnostics, and repairs for all ${vehicle.name} models.`;
+  const description = `Expert ${vehicle.name} service and repair in Villa Park, IL. Quiroz Auto Heroes provides quality maintenance, diagnostics, and repairs for all ${vehicle.name} models.`;
   return {
-    title: `${vehicle.name} Service & Repair - Quiroz Auto Repair | Cicero, IL`,
+    title: `${vehicle.name} Service & Repair - Quiroz Auto Heroes | Villa Park, IL`,
     description,
     alternates: {
       canonical: `/vehicles/${slug}`,
     },
     openGraph: {
       url: canonicalUrl,
-      title: `${vehicle.name} Service & Repair | Quiroz Auto Repair`,
+      title: `${vehicle.name} Service & Repair | Quiroz Auto Heroes`,
       description,
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${vehicle.name} Service & Repair | Quiroz Auto Repair`,
+      title: `${vehicle.name} Service & Repair | Quiroz Auto Heroes`,
       description,
     },
   };
@@ -90,11 +90,11 @@ export default async function VehicleDetailPage({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: `${vehicle.name} Service`,
-    description: `Maintenance and repair for all ${vehicle.name} models in Cicero, Illinois.`,
+    description: `Maintenance and repair for all ${vehicle.name} models in Villa Park, Illinois.`,
     serviceType: `${vehicle.name} auto repair`,
     provider: {
       '@type': 'AutoRepair',
-      name: 'Quiroz Auto Repair',
+      name: 'Quiroz Auto Heroes',
       url: absoluteUrl('/'),
     },
     brand: {

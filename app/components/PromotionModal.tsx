@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import flyerImage from '../assets/quiroz/special-winter.jpeg';
+import flyerImage from '../assets/flyer.jpeg';
 import { useLocale } from '../providers/LocaleProvider';
 
 export default function PromotionModal() {
@@ -49,7 +49,7 @@ export default function PromotionModal() {
               {/* Flyer image */}
               <Image
                 src={flyerImage}
-                alt="Quiroz Auto Repair Winter Specials - Free Brake Inspection, Free Muffler Inspection, 15% Off Custom Muffler System"
+                alt="Quiroz Auto Heroes Promotion - $29 Oil Change, $299 Brakes, Free Check Engine Light Scan"
                 className="w-full h-auto"
                 priority
               />

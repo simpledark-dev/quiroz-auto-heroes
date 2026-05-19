@@ -81,7 +81,7 @@ export default function VehiclesContent() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                                 <a
-                                    href="tel:7086524669"
+                                    href="tel:6302760478"
                                     className="inline-flex items-center justify-center gap-2 bg-[var(--qah-accent)] text-white px-8 h-12 rounded-full hover:bg-[var(--qah-accent-hover)] transition-colors duration-200 font-medium"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
