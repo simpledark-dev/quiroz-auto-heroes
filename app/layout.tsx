@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 import PromotionModal from './components/PromotionModal';
+import SuspensionBanner from './components/SuspensionBanner';
 import { LocaleProvider } from './providers/LocaleProvider';
 import './globals.css';
 
@@ -155,6 +156,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <SuspensionBanner />
         <LocaleProvider>
           <PromotionModal />
           {children}

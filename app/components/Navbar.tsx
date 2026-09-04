@@ -72,7 +72,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+      className={`fixed top-[var(--qah-banner-h)] left-0 right-0 z-50 transition-all duration-300 ${isScrolled
         ? 'bg-[var(--qah-card)]/98 backdrop-blur-md shadow-lg border-b border-white/5'
         : 'bg-gradient-to-b from-[var(--qah-light)]/80 to-transparent'
         }`}

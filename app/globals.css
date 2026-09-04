@@ -2,6 +2,8 @@
 
 body {
   background-color: var(--qah-light);
+  /* Reserve space for the fixed suspension banner (measured at runtime). */
+  padding-top: var(--qah-banner-h);
 }
 
 :root {
@@ -24,6 +26,9 @@ body {
   /* Text on light backgrounds */
   --qah-text-heading: #0a1628;
   --qah-text-body: #3a4e6a;
+
+  /* Suspension banner height — overridden by SuspensionBanner on mount. */
+  --qah-banner-h: 68px;
 }
 
 /* Scroll animation */
